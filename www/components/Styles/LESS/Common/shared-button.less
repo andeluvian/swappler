@@ -1,0 +1,57 @@
+@import "LESS/Common/shared-color.less";
+//variables
+@button-width: .75;
+@button-width-percent : percentage(@button-width);
+@button-height : 50px;
+@button-radius : calc(@button-height /2);
+.oneUpButton {
+  font-family: 'OpenSans-Light', sans-serif;
+  width: @button-width-percent;
+  color: white;
+  margin-left: 12.5%;
+  height: @button-height;
+  border-radius: @button-radius;
+  -webkit-border-radius: @button-radius;
+  display: block;
+  border: 1px solid;
+  font-size: 14pt;
+  text-transform: uppercase;
+} //endOneUpButton
+.gray-button {
+  background-color: @coolGrey;
+  border-color: @slateGreen;
+  &:active,
+  &:hover {
+    background-color: @slateGreen;
+    border-color: @coolGrey;
+  }
+} //end gray-button
+.gray-outline-button {
+  background-color: transparent;
+  color: @coolGrey;
+  border-color: @coolGrey;
+  &:active,
+  &:hover {
+    background-color: @coolGrey;
+    color: white;
+  }
+}
+.slateGreen-button {
+  background-color: @coolGrey;
+  border-color: @slateGreen;
+  &:active,
+  &:hover {
+    background-color: @slateGreen;
+  }
+} //end gray-button
+.headBtn {
+  position: absolute;
+  bottom: -21px;
+}
+.iWantBtn {
+  position: absolute;
+  top: calc(-@button-height /2);
+}
+.margin-bottom {
+  margin-bottom: 10px;
+}

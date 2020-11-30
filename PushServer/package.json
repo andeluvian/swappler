@@ -1,0 +1,11 @@
+{
+  "name": "swappler-server",
+  "version": "0.0.2",
+  "description": "swappler server service respond to Firebase event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo('test')"
+  },
+  "author": "Bao VU",
+  "license": "ISC"
+}

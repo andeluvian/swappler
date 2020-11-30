@@ -1,0 +1,28 @@
+/*oneUpLogin style*/
+.logo {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  margin: 40px auto -40px -150px;
+}
+.slogan {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  line-height: 1em;
+  width: 90%;
+  margin: 0px auto 20px;
+  text-shadow: 0px 1px 5px black;
+  -webkit-text-shadow: 0px 1px 5px black;
+}
+.button.button-fb {
+  background-color: rgba(59, 89, 152, 0.8);
+  border-color: #3b5998;
+}
+.button.button-fb.activated {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.button.button-dark {
+  background-color: rgba(58, 57, 58, 0.8);
+}

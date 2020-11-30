@@ -1,0 +1,57 @@
+<div class="modal">
+      <ion-header-bar class="in-content-header padding">
+        <h1 class="title">Filter your feed</h1>
+    </ion-header-bar>
+      <ion-content class="padding ion-overlay">
+        <div class="align-center padding">
+            <p>
+            Make it <strong>easier</strong> to find the <strong>products you love.</strong>
+            </p>
+        </div>
+          
+        
+       <div class="padding">
+            <h3>
+            Clothes-size range
+            </h3>
+            <div class="item range">
+                <span id="range-min">
+                    <strong class="color-main">M</strong>
+                </span>
+                <input type="range" name="volume" ng-model="profile.settings.size">
+                <span id="range-min">
+                    <strong class="color-main">L</strong>
+                </span>
+            </div>
+        </div>
+        
+        <div class="padding">
+            <h3>
+            Price range - euros, €
+            </h3>
+            <div class="item range">
+                <span id="range-min">
+                    <strong class="color-main">5</strong>
+                </span>
+                <input type="range" name="volume" ng-model="profile.settings.price">
+                <span id="range-min">
+                    <strong class="color-main">35</strong>
+                </span>
+            </div>
+        </div>        
+       
+    </ion-content>
+     <div class="bar bar-footer">
+        <div class="button-bar">
+            <a class="button">
+                <span class="icon ion-android-checkbox-outline"></span><br />
+                Publish
+            </a>
+            <a class="button" ng-click="close()">
+                <span class="icon ion-ios-close-empty" ></span><br />
+                cancel
+            </a>
+        </div>
+    </div>
+</div>
+

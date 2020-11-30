@@ -1,0 +1,26 @@
+/www (backup)/
+
+/.brackets.json
+/BAOBAO
+/README
+/README2
+/package.json
+/ionic.project
+/info.txt
+/hs_err_pid2020.log
+/hower.json
+
+/FUA.txt
+/config.xml
+/bower.json
+/www/.brackets.json
+/platforms/android/
+/platforms/ios/
+/platforms/platforms.json
+/bower_components/
+/engine/
+/hooks/
+/node_modules/
+/platforms/
+/plugins/
+/resources/

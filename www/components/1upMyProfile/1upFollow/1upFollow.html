@@ -1,0 +1,96 @@
+<ion-view>
+
+  <div class="bar settingsBar header80">
+    <h1 class="settingsTitle" style="color:white"> {{myName}} </h1>
+
+  </div>
+
+  <ion-content id="ken" has-bouncing="false" class="margin_top80" on-swipe-right="goBack()" on-swipe-left="goForward()">
+
+    <ion-tabs class="tabs-striped tabs-top  indicatorColor">
+
+
+      <ion-tab title="Following">
+        <div class="bgcolornull transactionListContainer">
+
+
+          <div class=" list chatList_list" ng-repeat="user in followingA">
+
+            <div class="item item-avatar item-icon-right itemOverride">
+
+
+              <img ng-click="profile(user.$id)" class="roundIMG" ng-src="{{userInfo(user.$id).imageUrl}}">
+
+              <div class="userName" ng-click="profile(user.$id)">
+                <h2>{{userInfo(user.$id).name}}</h2>
+
+              </div>
+              <div class="buttons">
+                <a ng-show="!clicked(user.$id)" ng-click="follow(user.$id)">
+                  <i class=" icon ion-person-add asd"></i>
+                </a>
+
+                <a ng-show="clicked(user.$id)" ng-click="unfollow(user.$id)">
+                  <i class="icon ion-ios-close-empty asd2"></i>
+
+                </a>
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </ion-tab>
+
+
+
+
+      <ion-tab title="Followers">
+        <div class="bgcolornull transactionListContainer">
+
+          <div class=" list chatList_list" ng-repeat="user in followerA">
+
+
+            <div class="item item-avatar item-icon-right itemOverride">
+
+
+              <img ng-click="profile(user.$id)" class="roundIMG" ng-src="{{userInfo(user.$id).imageUrl}}">
+
+              <div class="userName" ng-click="profile(user.$id)">
+                <h2>{{userInfo(user.$id).name}}</h2>
+
+              </div>
+              <div class="buttons">
+                <a ng-show="!clicked(user.$id)" ng-click="follow(user.$id)">
+                  <i class=" icon ion-person-add asd"></i>
+                </a>
+
+                <a ng-show="clicked(user.$id)" ng-click="unfollow(user.$id)">
+                  <i class="icon ion-ios-close-empty asd2"></i>
+
+                </a>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </ion-tab>
+
+
+
+    </ion-tabs>
+
+  </ion-content>
+
+  <close-footer direction=" 'MyProfile' "></close-footer>
+
+</ion-view>

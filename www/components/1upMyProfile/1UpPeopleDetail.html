@@ -1,0 +1,210 @@
+<ion-view title="Profile page">
+
+  <ion-content has-bouncing="false">
+
+    <div class="head-container">
+
+      <div class="bgcover">
+        <img ng-src="{{userdetail.imageUrl}}" class="blur imagestuff">
+        <!--        <img ng-src="http://graph.facebook.com/10153301031409475/picture?width=1000&height=1000" class="blur imagestuff">-->
+
+        <div class="prftxt align-center">
+          {{userdetail.name}}
+        </div>
+        <div ng-show="isPremium" class="titletxt align-center">
+          {{userdetail.title}}
+        </div>
+        <div class="rndImgContainer">
+          <!--        <div>-->
+          <img class="profile-image" ng-src="{{userdetail.imageUrl}}">
+        </div>
+      </div>
+      <!-- <button class="oneUpButton slateGreen-button headBtn" ng-click="gotoedit()"> Edit Profile</button>-->
+
+      <button ng-if="isFollow" class="oneUpButton slateGreen-button headBtn" ng-click="ifollow()">Follow</button>
+
+      <!-----------unfollow button-------------->
+      <button ng-if="!isFollow" class="oneUpButton slateGreen-button headBtn" ng-click="unfollow()">Unfollow</button>
+
+      <!-----------the users information---- --------------->
+
+    </div>
+
+
+    <div>
+
+
+
+
+      <div class="paddme"></div>
+
+      <div class="profile-stat-row ">
+        <div class="connection">
+          <div class="some">
+            {{followers.length}}
+
+          </div>
+          <div class="sometxt">
+            followers
+          </div>
+        </div>
+        <div class="connection">
+          <div class="some">
+            {{following.length}}
+
+          </div>
+          <div class="sometxt">
+            following
+          </div>
+        </div>
+        <div class="connection">
+          <div class="some">
+            {{deals.length}}
+
+          </div>
+          <div class="sometxt">
+            on sale
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding padding-bottom">
+
+        <div class="title">
+          About me
+        </div>
+        <div></div>
+        <div class="abouttxt">
+          {{userdetail.about}}
+
+        </div>
+
+        <div class="title paddme">
+          Find me
+        </div>
+
+        <div class="row paddme">
+
+          <div class="socialmediaicons col-25">
+            <a ng-click="fb()" class="ion-social-facebook"></a>
+            <!--  {{data.facebook}}-->
+          </div>
+          <div class="socialmediaicons col-25">
+            <a ng-click="ig()" class="ion-social-instagram-outline"></a>
+            <!--  {{data.premium}}-->
+          </div>
+
+          <div class="socialmediaicons col-25">
+            <a class="ion-social-twitter" ng-click="tw()"></a>
+            <!-- {{data.pinterest}}-->
+
+            <!-- 
+target="_blank" href="http://twitter.com/intent/user?screen_name={{data.twitter}}"
+-->
+          </div>
+          <div class="socialmediaicons col-25">
+            <a ng-click="blog()" class="ion-social-rss"></a>
+            <!--  {{data.twitter}}-->
+          </div>
+
+
+        </div>
+
+        <!------INSERT HERE NG-REPEAT FOR ITEMS------->
+
+        <div class="title">
+          Products on sale
+        </div>
+
+        <div ng-repeat="item in wishList">
+          <div class="item-container">
+            <a ng-href="#/product-details/{{item.$id}}">
+              <img src="data:image/jpeg;base64,{{itemInfo(item.$id).imageURL}}">
+            </a>
+            <!--     BAOS CODE IN HERE     <a href="#/productDetails/{{item.$id}}">-->
+
+
+
+
+            <div class="itemtitle">{{itemInfo(item.$id).name}}</div>
+            <div class="itemdescription">{{itemInfo(item.$id).desc | truncateFilter:42}} </div>
+            <div class="itemprice">
+              {{itemInfo(item.$id).cost}} €
+
+            </div>
+
+          </div>
+          <div class="paddme">
+
+          </div>
+        </div>
+
+        <button class="viewbtn button-positive">
+          View All
+        </button>
+        <div class="paddme">
+        </div>
+
+
+        <!------INSERT HERE NG-REPEAT FOR FOLLOWING------->
+        <!--<div>
+  Following - <span class="color-main">{{following.length}}</span>
+</div>
+
+<ion-item ng-repeat="following in followingList">
+  <div class="row avatar-row">
+    <div class="col col-33 avatar-col">
+
+      <a href="#/peopleDetails/{{following.$id}}"><img actual-src="{{followingInfo(following.$id).imageUrl}}" ng-src="data:image/jpeg;base64,{{followingInfo(following.$id).imageUrl}}" /> </a>
+      <p>
+        {{followingInfo(following.$id).name}}
+      </p>
+    </div>
+  </div>
+</ion-item>
+
+
+
+<button class="viewbtn button-positive">
+  View All
+</button>
+--INSERT HERE FOLLOWERS NG-REPEAT------
+
+<h3>
+                Followers - <span class="color-main">{{followers.length}}</span>
+            </h3>
+<ion-item ng-repeat="follower in followerList">
+  <div class="row avatar-row">
+    <div class="col col-33 avatar-col">
+      <a href="#/peopleDetails/{{follower.$id}}"><img src="data:image/jpeg;base64,{{followerInfo(follower.$id).imageUrl}}" /> </a>
+      <p>{{followerInfo(follower.$id).name}}
+      </p>
+
+
+    </div>
+  </div>
+</ion-item>
+
+
+
+
+
+<button class=" viewbtn button-positive">
+  View All
+</button>-->
+
+
+      </div>
+
+    </div>
+
+    <!--PADDING ENDS-->
+
+
+  </ion-content>
+
+  <back-footer></back-footer>
+
+</ion-view>

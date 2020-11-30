@@ -1,0 +1,259 @@
+/*.head-container {
+  padding-bottom: 5px;
+  position: relative;
+}*/
+
+.paddme {
+  margin-top: 5%;
+}
+
+.paddu {
+  margin-bottom: 25%;
+}
+
+.title {
+  font-family: 'Alegreya', serif;
+  margin-left: 5%;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.sellername {
+  color: rgb (102, 102, 102);
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 5pt;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 50px;
+  vertical-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item-container {
+  width: 90%;
+  margin: 5%;
+  text-align: center;
+}
+
+.item-container a {
+  text-decoration: none;
+}
+
+.item-container img {
+  width: 100%;
+  height: auto;
+}
+
+.item-container .itemtitle {
+  font-family: 'Alegreya', serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.item-container .itemdescription {
+  text-align: center;
+}
+
+.avatarimagesize {
+  max-height: 50px !importnat;
+  max-width: 50px !importnat;
+}
+
+.editbtn {
+  background-color: rgb(102, 102, 102);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  height: 40px;
+  width: 210px;
+  left: 50pt;
+  right: 50pt;
+  /*  top: 45%;*/
+  bottom: -15px;
+  border-radius: 20px;
+  border-color: rgb(51, 51, 51);
+  border-style: solid;
+  -webkit-border-radius: 25px;
+  display: block;
+  margin: auto;
+  padding: 0 30px;
+  position: absolute;
+}
+
+.viewbtn {
+  border-color: rgb(118, 139, 127);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: white;
+  height: 40px;
+  width: 210px;
+  left: 50pt;
+  right: 50pt;
+  border-radius: 20px;
+  background-color: rgb(159, 168, 163);
+  border-style: solid;
+  -webkit-border-radius: 25px;
+  display: block;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.prftxt {
+  position: absolute;
+  font-family: 'Alegreya', serif;
+  top: 70%;
+  left: 0%;
+  font-style: italic;
+  /*  font-weight: bold;*/
+  height: 20px;
+  width: 100%;
+  font-size: 18pt;
+  margin: auto;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.titletxt {
+  position: absolute;
+  font-family: 'Alegreya', serif;
+  top: 80%;
+  left: 0%;
+  font-style: italic;
+  /*  font-weight: bold;*/
+  height: 20px;
+  width: 100%;
+  font-size: 20pt;
+  margin: auto;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.rndImgContainer {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: auto;
+  margin-top: -40px;
+  margin-left: -40px;
+  text-align: center;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.connection {
+  text-align: center;
+  padding: 5pt;
+  display: inline-block;
+  width: 30%;
+  margin: 2pt
+}
+
+.some {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sometxt {
+  font-size: 14px;
+  color: black;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.abouttxt {
+  width: 88%;
+  height: 71px;
+  font-size: 14px;
+  color: black;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 5%;
+  padding-top: 15px;
+  padding-bottom: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify
+}
+
+
+/*.itemdescription {
+  white-space: nowrap;
+  color: black;
+  max-width: 280px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 10pt;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}*/
+
+.itemprice {
+  color: rgb(118, 139, 127);
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.socialmediaicons {
+  font-size: 35px;
+  color: rgb(102, 102, 102);
+  padding-left: 19pt;
+}
+
+.myitem {
+  width: 92%;
+  height: auto;
+  margin-left: 4%;
+}
+
+.myitembox {
+  width: 100%;
+  border-style: none;
+  border: 0px;
+  text-align: center;
+  /*margin-left: 45% !important;*/
+}
+
+.myitembox .itemdescription {}
+
+
+/*.bgcover {
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  left: 0;
+  position: relative;
+  z-index: -1;
+}*/
+
+.noblur {
+  -webkit-filter: blur(0px);
+  !important;
+  -moz-filter: blur(0px);
+  !important;
+  -o-filter: blur(0px);
+  !important;
+  -ms-filter: blur(0px);
+  !important;
+  filter: blur(0px);
+  !important;
+  z-index: 2;
+}

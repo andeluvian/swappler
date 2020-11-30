@@ -1,0 +1,144 @@
+.productBG {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.productContent-container {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+}
+
+.product-image {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  height: 340px;
+  width: auto;
+  left: 50%;
+  /* display: block;
+ margin: 0 auto;*/
+}
+
+.iWantButton {
+  position: absolute;
+  left: 12.5%;
+  top: -32px;
+}
+
+.removebtn {
+  background-color: rgb(141, 35, 15);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  height: 40px;
+  width: 220px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-style: none;
+  display: block;
+  margin: auto;
+  padding: 0 30px;
+  font-size: 14px;
+  word-wrap: normal;
+  position: absolute;
+  align-content: center;
+  left: 22%;
+  top: 68%;
+}
+
+.pixelline {
+  border-bottom: 2px;
+  border-color: rgb(159, 168, 163);
+  border-style: solid;
+}
+
+.buttonpade {
+  margin-top: 15%;
+}
+
+.detailitemtitle {
+  font-family: 'Alegreya', serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10%;
+  color: black;
+}
+
+.detailitemprice {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  color: black;
+}
+
+.detaildesc {
+  margin-left: 5%;
+  color: black;
+  font-size: 14px;
+  width: 90%;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  /* margin-right: 2%; */
+  /* display: block; */
+}
+
+.content-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.image-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  height: 400px;
+  -webkit-transform: scale(1.2);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.2);
+  /* Firefox */
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -o-transform: scale(1.2);
+  /* Opera */
+  transform: scale(1.2);
+  filter: blur(30px);
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  overflow: hidden
+}
+
+.seller-avatar-hardCoded {
+  border: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 80px !important;
+}
+
+.seller-img {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.insideCard-p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15pt;
+  line-height: 50px;
+  font-style: italic;
+  color: #B0B0B0;
+  vertical-align: center;
+}
+
+.customList {
+  height: 100%;
+  width: 100%;
+}

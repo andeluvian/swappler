@@ -1,0 +1,215 @@
+<ion-view>
+
+  <div class="bar settingsBar header80">
+    <h1 class="settingsTitle" style="color:white"> Transaction History </h1>
+
+  </div>
+
+  <ion-content id="ken2" has-bouncing="false" class="margin_top80" on-swipe-right="goBack()" on-swipe-left="goForward()">
+
+    <ion-tabs class="tabs-striped tabs-top  indicatorColor">
+
+
+      <ion-tab title="Sold">
+
+
+
+        <div class="bgcolornull transactionListContainer">
+          <div class="padding_bottom55">
+            <div class="TransactionsRow">
+
+              <div class="TransactionCol">
+                <p>
+                  <b> {{sellingItems.length}} </b>
+                  <br> Products sold
+                </p>
+              </div>
+
+              <div class="TransactionCol">
+
+                <p>
+                  <b>{{totalP}}</b>
+                  <br> Money made
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="list chatList_list" ng-repeat="item in sellingItems | orderBy: '-bought'">
+
+            <div class="transaction-item-container">
+
+              <img src="data:image/jpeg;base64,{{item.imageURL}}">
+
+              <div class="itemtitle">
+                <h3><b>{{item.name}}</b></h3>
+                <p>
+                  {{item.desc| truncateFilter:42}}
+                </p>
+
+                <p style="color:rgb(118, 139, 127)">
+                  <b>  {{item.price}}€ </b>
+                  <br>
+                </p>
+                <p ng-if="item.sellingMethod === 'postage'" style="color:rgb(118, 139, 127)">
+                  postage: <b>{{item.postagePrice}}€</b>
+
+                </p>
+
+              </div>
+
+
+              <div class="transaction-seller-container">
+                <h3><b>Buyer</b></h3>
+
+                <div style="padding-bottom:5px; padding-top:5px; height:60px">
+                  <img src="{{sellerInfo(item.buyer).imageUrl}}">
+                  <p>{{sellerInfo(item.buyer).name}}</p>
+                </div>
+
+
+              </div>
+              <div class="transaction-rating-container">
+
+                <div class="TransactionCol">
+                  <h3> <b> Date </b> </h3>
+                  <p>{{item.bought | date:'dd.MM.yyyy'}} </p>
+                </div>
+
+                <div class="TransactionCol">
+                  <h3> <b> Rate </b> </h3>
+
+                  <div ng-show="item.rating === 'good'">
+
+                    <i style="float: left;
+    font-size: 24px; margin-right:10px;" class="icon ion-happy-outline"></i>
+                    <p>Success</p>
+
+                  </div>
+                  <div ng-show="item.rating === 'bad'">
+                    <i style="float: left;
+    font-size: 24px;  margin-right:10px;" class="icon ion-sad-outline"></i>
+                    <p>Issues</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </ion-tab>
+
+
+
+
+      <ion-tab title=" Purchased ">
+
+
+
+        <div class="bgcolornull transactionListContainer">
+          <div class="padding_bottom55">
+            <div class="TransactionsRow">
+
+              <div class="TransactionCol">
+                <p>
+                  <b> {{purchasedItems.length}} </b>
+                  <br> Products purchased
+                </p>
+              </div>
+
+              <div class=" TransactionCol ">
+
+                <p>
+                  <b>{{totalP2}}</b>
+                  <br> Money spent
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="list chatList_list" ng-repeat="item in purchasedItems | orderBy: '-time'">
+
+            <div class="transaction-item-container">
+
+              <img src="data:image/jpeg;base64,{{item.imageURL}}">
+
+              <div class="itemtitle">
+                <h3><b>{{item.name}}</b></h3>
+                <p>
+                  {{item.desc| truncateFilter:42}}
+                </p>
+
+                <p style="color:rgb(118, 139, 127)">
+                  <b>  {{item.price}}€ </b>
+                </p>
+
+                <p ng-if="item.sellingMethod === 'postage'" style="color:rgb(118, 139, 127)">
+                  postage: <b>{{item.postagePrice}}€</b>
+
+                </p>
+
+              </div>
+
+
+              <div class="transaction-seller-container">
+                <h3><b>Purchased from</b></h3>
+
+                <div style="padding-bottom:5px; padding-top:5px; height:60px">
+                  <img src="{{sellerInfo(item.seller).imageUrl}}">
+                  <p>{{sellerInfo(item.seller).name}}</p>
+                </div>
+
+
+              </div>
+              <div class="transaction-rating-container">
+
+                <div class="TransactionCol">
+                  <h3> <b> Date </b> </h3>
+                  <p>{{item.bought | date:'dd.MM.yyyy'}} </p>
+                </div>
+
+                <div class="TransactionCol">
+                  <h3> <b> Rate </b> </h3>
+
+                  <a class="ratingButton-dark" ng-show="item.rating === 'good'" ng-click="positiveRating(item.$id)">
+                    <i class="icon ion-happy-outline"></i>
+                  </a>
+
+                  <a class="ratingButton" ng-show="item.rating === 'bad'" ng-click="positiveRating(item.$id)">
+                    <i class="icon ion-happy-outline"></i>
+                  </a>
+
+                  /
+
+                  <a class="ratingButton" ng-show="item.rating === 'good'" ng-click="negativeRating(item.$id)">
+                    <i class="icon ion-sad-outline"></i>
+                  </a>
+
+                  <a class="ratingButton-dark" ng-show="item.rating === 'bad'" ng-click="negativeRating(item.$id)">
+                    <i class="icon ion-sad-outline"></i>
+                  </a>
+
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </ion-tab>
+
+
+
+    </ion-tabs>
+
+  </ion-content>
+
+  <close-footer direction=" 'MyProfile' "></close-footer>
+
+</ion-view>

@@ -1,0 +1,221 @@
+<ion-view title="Add New">
+  <ion-content has-bouncing="false" scroll="false" class="ion-overlay greyBackgound ">
+    <div class="vertical-center">
+      <h3 style="font-size: 25px" class=" align-center title whiteText">
+                Add a new product for sales
+            </h3>
+      <hr class="horizontalRow">
+      <p class="align-center whiteText" style="font-size:17px">
+        Start by taking or uploading a picture.
+        <br />
+        <strong class="whiteText">Let's begin!</strong>
+      </p>
+      <div class="row add-new-row ">
+        <div class="col">
+          <a>
+            <span class="yellowIcon ion-camera whiteText" ng-click="upload()"></span>
+            <div class="whiteText changeFontWeight">
+              <br /> Take a new
+              <br /> photo
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a>
+            <span class="yellowIcon ion-images whiteText" ng-click="selectPicture()"></span>
+            <div class="whiteText changeFontWeight">
+
+              <br /> Upload from
+              <br /> gallery
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+  <close-footer direction="'cards'"></close-footer>
+
+
+  <script id="image-popover.html" type="text/ng-template">
+    <!--ionic modal -->
+
+    <div class="modal">
+
+
+
+      <ion-header-bar style="background-color:#9fa8a3; border-bottom-color:#9fa8a3">
+        <h1 class="title">ADD A PRODUCT FOR SALE</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div class="list padding">
+          <div class="uploadProductFont">Product picture</div>
+          <div class="row">
+            <img ng-src="{{imgSrc}}" height="30%" width="100%" />
+            <!--            <img src="../img/fake-item.jpg" />-->
+
+
+          </div>
+
+          <div class="padding">
+
+            <div class="list">
+              <div class="uploadProductFont">Product name</div>
+              <input style="width:100%; margin-top:16px;margin-bottom:16px; border-top:2px solid black !important;" ng-model="items.name" type="text" placeholder="Insert name here e.g. Black dress">
+              <div class="uploadProductFont">Product description</div>
+              <textarea placeholder="Tell some more about the product" style="width:100%; border-top:2px solid black !important; margin-top:16px; border: 1px solid #E0E0E0" ng-model="items.desc"></textarea>
+            </div>
+
+          </div>
+
+          <!--choose categories -->
+
+
+
+          <div class="padding">
+            <div class="uploadProductFont">Select category</div>
+            <ion-radio-fix name="category" ng-repeat="category in categories" ng-show="!$first" ng-value="category.id" ng-model="selection.id" class="no-border" ng-click="items.size={{category.default}}">
+              {{category.name}}
+
+
+            </ion-radio-fix>
+
+          </div>
+          <div ng-show="isPremium" class="padding">
+
+            <div class="uploadProductFont">Choose product type</div>
+
+            <ion-radio-fix name="item" ng-repeat="item in primaryCategories" ng-value="item.id" ng-model="CategorySelection.id" class="no-border">
+              {{ item.name }}
+            </ion-radio-fix>
+          </div>
+
+
+          <!--End choose categories-->
+          <!--select clothes size module -->
+
+          <!--ng-if="filterSizeInput(selection.id)"-->
+          <div class="padding">
+            <div class="col uploadProductFont">Select size</div>
+            <div class="row" ng-if="filterSizeInput(selection.id)">
+              <div class="col-20">
+
+                <div ng-switch on="items.size" class="selectText">
+                  <div ng-switch-when="0">XXS</div>
+                  <div ng-switch-when="1">XS</div>
+                  <div ng-switch-when="2">S</div>
+                  <div ng-switch-when="3">M</div>
+                  <div ng-switch-when="4">L</div>
+                  <div ng-switch-when="5">XL</div>
+                  <div ng-switch-when="6">XXL</div>
+                  <div ng-switch-default> {{items.size}} </div>
+                </div>
+              </div>
+              <div class="col-80">
+                <rzslider class="grey-slider" rz-slider-floor="0" rz-slider-ceil="6" rz-slider-model="items.size" rz-slider-step="1" rz-slider-hide-limit-labels="true" rz-slider-always-show-bar="true" rz-slider-translate="translate">
+                </rzslider>
+
+              </div>
+            </div>
+
+            <div class="row" ng-if="!filterSizeInput(selection.id)">
+              <div class="col-20">
+                {{items.size}}
+
+              </div>
+              <div class="col-80">
+                <rzslider class="grey-slider" rz-slider-floor="28" rz-slider-ceil="46" rz-slider-model="items.size" rz-slider-step="1" rz-slider-hide-limit-labels="true" rz-slider-always-show-bar="true" rz-slider-translate="translate">
+                </rzslider>
+
+              </div>
+            </div>
+
+
+          </div>
+
+          <!--End select clothes size module-->
+
+          <!--select price -->
+
+
+          <div class="padding">
+            <div class="col uploadProductFont">Insert product price</div>
+            <div class="row">
+
+
+              <div class="col-20 selectText">
+                {{items.cost}}
+              </div>
+              <div class="col-80">
+
+                <!--
+                <rzslider rz-slider-floor="0" class="grey-slider" rz-slider-ceil="500" rz-slider-model="items.cost" rz-slider-step="10" rz-slider-hide-limit-labels="true" rz-slider-always-show-bar="true" rz-slider-translate="translate">
+                </rzslider>  
+-->
+
+                <input style=" float:left; margin-left:10% width:80%; border-top:2px solid black !important;" type="number" name="price" ng-model="items.cost" placeholder="50€">
+
+              </div>
+            </div>
+          </div>
+          <!--End select price-->
+
+          <!--choose address -->
+
+          <!--
+        <div class="padding">
+          <div class="uploadProductFont">Choose address</div>
+          <ion-radio name="address" ng-repeat="item in addresses" ng-value="item.value" ng-model="choosedAddress" class="no-border">
+            {{ item.text }}
+          </ion-radio>
+        </div>
+-->
+
+          <!--End choose address-->
+
+          <div class="padding">
+            <div class="col uploadProductFont">How do you sell the product</div>
+
+            <ion-radio-fix name="option" ng-repeat="option in sellOptions" ng-value="option.id" ng-model="options.id" class="no-border">
+              {{option.name}}
+            </ion-radio-fix>
+          </div>
+
+          <div ng-if="options.id === 'postage' || options.id === 'both'" class="padding">
+            <div class="col uploadProductFont">Postage fee (package size)</div>
+
+            <select style="width:100%;" ng-model="postageSelection.id">
+              <optgroup ng-repeat="group in OptionGroups" label="{{group.name}}">
+
+                <option label="{{option.name}}, {{option.price}}€" value="{{option.price}}" ng-repeat="option in group.options">
+
+                </option>
+              </optgroup>
+            </select>
+
+          </div>
+
+          <div class="padding" ng-if="options.id === 'cash' || options.id === 'both'">
+            <div class="col uploadProductFont">Location of the product</div>
+
+            <input ng-model="items.meetingPlace" style="width:100%; border-top:2px solid black !important;" type="text" placeholder="e.g. Helsinki, Kurvi or central Helsinki" maxlength="50">
+          </div>
+
+        </div>
+        <!-- End list padding -->
+
+        <button class="button button-submit" ng-click="submit(selection.id)">SUBMIT THE PRODUCT</button>
+
+        <div style="text-align:center;width:100%;font-size:18pt; color:rgb(51,51,51,1);font-family: Alegreya">
+          <span>or</span>
+        </div>
+
+
+        <button class="button button-cancel" ng-click="closeModal()"> cancel </button>
+      </ion-content>
+    </div>
+    <!--End ionic modal-->
+
+  </script>
+</ion-view>

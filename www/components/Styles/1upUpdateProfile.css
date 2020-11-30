@@ -1,0 +1,45 @@
+ .aboutupdate {
+   margin-left: 15%;
+   color: black;
+   font-size: 12px;
+   max-width: 300px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: lighter;
+   display: block;
+ }
+ 
+ .notedisclaimer {
+   margin-left: 10%;
+   color: black;
+   font-size: 14px;
+   font-family: 'Open Sans', sans-serif;
+   display: block;
+ }
+ 
+ .disclaimer {
+   color: black;
+   font-size: 14px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: normal;
+   display: block;
+ }
+ 
+ .socialmediainput {
+   color: black;
+   font-size: 14px;
+   font-family: 'Open Sans', sans-serif;
+   margin-left: 2%;
+   border-top: 1px solid black;
+   max-height: 40px;
+   max-width: 200px;
+ }
+ 
+ .updatedisc {
+   color: black;
+   font-size: 14px;
+   font-family: 'Open Sans', sans-serif;
+   margin-left: 15%;
+   line-height: 14px;
+   width: 250px;
+   height: 91px;
+ }

@@ -1,0 +1,11 @@
+/* Tab indicators */
+
+.indicatorColor {
+  color: rgb (102, 102, 102);
+  font-size: 12pt;
+}
+
+.tabs-top > .tabs,
+.tabs.tabs-top {
+  top: auto;
+}

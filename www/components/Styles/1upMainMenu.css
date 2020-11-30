@@ -1,0 +1,36 @@
+.add-new-row .col a span.icon {
+  color: #E3E0CF;
+  font-size: 3.5em;
+}
+
+.bar-header.in-content-header {
+  border-bottom: none;
+}
+
+.greyBackgound {
+  background-color: #9fa8a3 !important;
+}
+
+.whiteText {
+  color: #ffffff
+}
+
+.changeFontWeight {
+  font-weight: 100;
+}
+
+.horizontalRow {
+  border-width: 1.3px;
+  width: 85%;
+  border-style: solid;
+  color: #E3E0CF
+}
+
+.iconx {
+  color: #E3E0CF;
+  font-size: 3.5em;
+}
+
+.margintop5 {
+  margin-top: 5%;
+}

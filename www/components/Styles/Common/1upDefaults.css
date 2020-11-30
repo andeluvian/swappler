@@ -1,0 +1,110 @@
+/*This stylesheet is for default styling, margins , paddings , fonts and colors, buttons
+
+
+ .removebtn {
+   background-color: rgb(141, 35, 15);
+   font-family: 'Open Sans', sans-serif;
+   text-transform: uppercase;
+   color: white;
+   height: 40px;
+   width: 220px;
+   border-radius: 25px;
+   -webkit-border-radius: 25px;
+   border-style: none;
+   display: block;
+   margin: auto;
+   padding: 0 30px;
+   font-size: 14px;
+   word-wrap: normal;
+   position: absolute;
+   align-content: center;
+   left: 22%;
+   top: 68%;
+ }
+
+ .buttonmargin {
+        margin-bottom: 5%;
+      }
+
+      .buttonmargin10 {
+        margin-bottom: 10%;
+      }
+
+      .marginleft10 {
+        margin-left: 10%;
+      }
+
+
+      .margintop10 {
+        margin-top: 10px;
+      }
+
+      .marginbot10 {
+        margin-bottom: 35px;
+      }
+
+
+*/
+
+.marginright10 {
+  margin-right: 10%;
+}
+
+.margin_bot50 {
+  bottom: 54px;
+}
+
+.margin_top80 {
+  top: 80px;
+}
+
+.padding_bottom55 {
+  padding-bottom: 55px;
+}
+
+.header80 {
+  height: 80px !important;
+}
+
+.footerBadge {
+  position: absolute !important;
+  top: 0px !important;
+  left: 10px !important;
+}
+
+.chatListBadge {
+  position: absolute!important;
+  top: 50% !important;
+  margin-top: -7px !important;
+  right: 30px !important;
+}
+
+.notificationBadge {
+  background-color: rgb(188, 177, 156) !important;
+  border-radius: 50% !important;
+  color: white !important;
+}
+
+.alertBox .popup {
+  background-color: white;
+}
+
+.alertBox .popup-title {
+  font-weight: 400;
+  font-size: 16pt;
+  font-family: Alegreya;
+  text-align: center;
+}
+
+.alertBox .popup-content {
+  font-weight: 400;
+  font-size: 12pt;
+  font-family: Alegreya;
+  font-style: italic;
+}
+
+.alertBox .button {
+  color: white;
+  background-color: rgb(188, 177, 156) !important;
+  border-color: rgb(188, 177, 156) !important;
+}

@@ -1,0 +1,239 @@
+<style>
+
+</style>
+
+<ion-view>
+
+  <ion-header-bar class="bar-header ">
+
+    <h1 class="wishtitle"> {{items.name}}, {{items.cost}}€</h1>
+    <div class="paddme"></div>
+  </ion-header-bar>
+
+  <div class="bar bar-subheader margintop10 marginbot10">
+    <div class=" button-bar ">
+
+      <a ng-if="checkOwner(room.buyer) " class="button " ng-href="#/product-details/{{items.$id}}">
+
+        <br /> View product</a>
+      <a ng-if="checkOwner(room.owner) " class="button " ng-click="kickBuyer(room.buyer) ">
+        <br /> Kick buyer out</a>
+      <a ng-if="checkOwner(room.owner) " class="button " ng-click="salemodal.show() ">
+        <br/> Mark as Sold
+      </a>
+
+      <a class="button " ng-show="isSold" ng-if="checkOwner(room.buyer)" ng-click="salemodal.show()">
+        <br/> Confirm
+      </a>
+
+      <a class="button" ng-click="leave()" ng-if="checkOwner(room.buyer)">
+
+        <br /> Leave chat
+      </a>
+
+    </div>
+
+  </div>
+
+  <ion-content has-bouncing="false" class="has-header margin_bot50" delegate-handle="mainScroll">
+
+    <div class=" margintop10 marginbot10"></div>
+
+
+    <div class="test">
+
+      <div ng-if="checkOwner(room.buyer) || checkOwner(room.owner) " ng-repeat="msg in chatRoomContent ">
+
+        <div ng-if="checkOwner(msg.sender)===true ">
+          <div class="row bubble_right ">
+
+            <div class="textArea  chatmsg ">
+              <p>{{msg.content}} </p> <span am-time-ago="{{msg.time}} "></span>
+            </div>
+
+            <div class="imgArea ">
+              <img ng-src="{{userInfo(msg.sender).imageUrl}} " />
+            </div>
+
+          </div>
+        </div>
+
+        <div ng-if="checkOwner(msg.sender)===false ">
+          <div class="row bubble_left ">
+            <div class="imgArea ">
+              <img ng-src="{{userInfo(msg.sender).imageUrl}} " />
+            </div>
+
+            <div class=" textArea marginright10 chatmsg ">
+              <p> {{msg.content}} </p> <span am-time-ago="{{msg.time}} "></span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-show="isSold" ng-if="!checkOwner(room.owner)">
+      <h3 class="title paddu">Product is marked as sold, confirm transaction by pressing confirm purchase</h3>
+
+    </div>
+
+    <div ng-show="isSold" ng-if="checkOwner(room.owner)">
+      <h3 class="title paddu">Waiting for user to confirm the sale..</h3>
+
+    </div>
+
+
+    <div class="showStatusDiv" ng-show="roomDetails.buyer === true" ng-if="checkOwner(room.owner)">
+      <h1 class="title paddu">Waiting for a new buyer...</h1>
+
+    </div>
+
+    <div class="showStatusDiv" ng-show="roomDetails.buyer === true" ng-if="!checkOwner(room.owner)">
+      <h1 class="title paddu">You have been kicked out of this chatroom and are unable to send new messages.</h1>
+
+    </div>
+
+
+
+  </ion-content>
+
+  <div class="enterMessageContainer" ng-show="!isSold">
+
+    <div class="inputField">
+      <input type="text " placeholder="Write message here" ng-model="data.chatContent " />
+    </div>
+
+    <a class="sendButton " ng-click="addMessage(room.buyer,room.owner) ">
+
+      Send
+
+    </a>
+
+  </div>
+
+  <back-footer></back-footer>
+
+
+
+  <script id="saleModal.html " type="text/ng-template">
+
+    <div class="modal " ng-if="checkOwner(room.owner) ">
+      <ion-content has-bouncing="false" scroll="false " class="ion-overlay white ">
+        <div class="padding align-center vertical-center ">
+
+          <div class="upper_container">
+            <i class="smileyface icon ion-happy-outline"></i>
+            <p class="soldText">Product sold</p>
+
+          </div>
+
+          <div class="lower_container">
+            <p class="itemInfotext">
+              {{items.name}}
+              <br>
+              <strong>{{items.cost}}€</strong>
+            </p>
+            <p ng-if="items.sellingMethod === 'postage' || items.sellingMethod === 'both'" class="itemInfotext">
+              + {{items.postagePrice}}€ postage (if agreed)
+            </p>
+
+          </div>
+          <div class="image_container">
+            <p class="buyerText" style="vertical-align: center"> <strong>Buyer: </strong></p>
+            <img class="roundItem" ng-src="{{userInfo(room.buyer).imageUrl}} ">
+            <p class="buyernameText">{{userInfo(room.buyer).name}}</p>
+
+          </div>
+          <div class="button_container">
+
+            <button ng-if="!isSold " class="button greygreenbtn " ng-click=" markAsSold() ">
+              Confirm
+            </button>
+
+            <button ng-if="isSold " class="button greygreenbtn " ng-click=" unSold() ">
+              Mark as unsold
+            </button>
+            <!-- 
+          <button class="button button-negative " ng-click="cancel() "> Cancel
+          </button>
+
+-->
+          </div>
+
+        </div>
+
+        <div class="bar bar-footer">
+          <div class="button-bar">
+            <a class="button" ng-click="cancel()">
+              <span class="icon ion-ios-close-empty"></span>
+              <br /> Back
+            </a>
+          </div>
+        </div>
+
+      </ion-content>
+    </div>
+
+
+    <div class="modal " ng-if="checkOwner(room.buyer) ">
+
+
+
+      <ion-content has-bouncing="false" scroll="false " class="ion-overlay white ">
+        <div class="padding align-center vertical-center ">
+
+          <div class="upper_container">
+            <i class="smileyface icon ion-happy-outline"></i>
+            <p class="soldText">Product sold</p>
+
+          </div>
+
+          <div class="lower_container">
+            <p class="itemInfotext">
+              {{items.name}}
+              <br>
+              <strong>{{items.cost}}€</strong>
+            </p>
+
+            <p ng-if="items.sellingMethod === 'postage' || items.sellingMethod === 'both'" class="itemInfotext">
+              + {{items.postagePrice}}€ postage (if agreed)
+            </p>
+
+
+          </div>
+          <div class="image_container">
+            <p class="buyerText" style="vertical-align: center"> <strong>Seller: </strong></p>
+            <img class="roundItem" ng-src="{{userInfo(room.owner).imageUrl}} ">
+            <p class="buyernameText">{{userInfo(room.owner).name}}</p>
+
+          </div>
+          <div class="button_container">
+
+            <button class="button greygreenbtn " ng-click=" confirm(items.$id, userInfo(room.buyer).name) ">
+              Confirm
+            </button>
+
+
+          </div>
+
+        </div>
+
+        <div class="bar bar-footer">
+          <div class="button-bar">
+            <a class="button" ng-click="cancel()">
+              <span class="icon ion-ios-close-empty"></span>
+              <br /> Back
+            </a>
+          </div>
+        </div>
+
+      </ion-content>
+    </div>
+
+
+
+
+  </script>
+
+</ion-view>

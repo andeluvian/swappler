@@ -1,0 +1,183 @@
+<style>
+  .backGround {
+    background-image: url(./img/card-background.jpg);
+    background-size: cover;
+  }
+</style>
+
+<ion-view title="Discover">
+
+  <ion-content has-bouncing="false" scroll="false" class="backGround">
+    <!--
+        <ion-header-bar class="no-scroll-header">
+           <h1 class="title">Discover</h1>
+        </ion-header-bar>
+-->
+
+    <div>
+      <td-cards delegate-handle="friends">
+        <div ng-repeat="card in filtered = (cards | orderBy : '-$id')">
+
+
+          <td-card class="card-{{$index}}" on-transition-left="discard(card.$id)" on-transition-right="swipeRight(card.$id)">
+            <a href="#/product-details/{{card.$id}}">
+
+              <div class="product-container" style="background-image: url(data:image/jpeg;base64,{{card.imageURL}})" ng-click="cardClicked($index)">
+                <div class="product-info-container">
+                  <div class="product-title-container vertical-center">
+
+                    <p>
+                      <!--{{card.title}}-->
+
+                      <strong>        {{card.name}}   </strong>
+
+                    </p>
+                    <p class="product-meta">
+                      {{card.cost}}€
+
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <span class="seller-header-box">
+                    Seller
+                </span>
+
+            <div class="seller-container-hardCoded">
+              <a class="item item-avatar seller-avatar-hardCoded" ng-click="Ownerprofile()" href="#/peopleDetails/{{card.submitedby}}">
+                <img class="seller-img" ng-src="{{ownerInfo(card.submitedby).imageUrl}}">
+
+                <p>
+
+                  <!--ONLY FIRST NAME, NOT LAST-->
+                  {{ownerInfo(card.submitedby).name}}
+
+
+                </p>
+                <p ng-show="ownerInfo(card.submitedby).premium === true" style="font-style:italic;">{{ownerInfo(card.submitedby).title}}</p>
+
+              </a>
+            </div>
+          </td-card>
+          <div class="buttonArea buttonmargin" ng-if="$last">
+            <div class="buttonBlock">
+              <button ng-click="discard(card.$id)" class="ion-close-round"></button>
+            </div>
+            <div class="buttonBlock">
+              <button ng-click="swipeRight(card.$id)" class="ion-checkmark-round"></button>
+
+            </div>
+
+
+          </div>
+
+          <!--<button class="button button-positive" ng-click="discard(card.$id)">NOPE</button>-->
+        </div>
+      </td-cards>
+    </div>
+
+    <!--appear when length is 0 -->
+    <div ng-show="cards.length == 0" class="cardOver">
+      <div class="content">
+        <i class="ion-sad-outline"></i>
+
+        <div class="p">Sorry,
+          <br> there's no more products matching your search
+        </div>
+        <div class="p">
+          <br>Try to adjust your filters from the FILTERS-tab below
+        </div>
+      </div>
+    </div>
+
+    <!--End appear when length is 0-->
+    <div class="bar bar-footer">
+      <cards-footer> </cards-footer>
+    </div>
+  </ion-content>
+  <script id="queueModal.html" type="text/ng-template">
+    <div class="modal blurModalBackground">
+      <ion-content scroll="false" class="ion-overlay white">
+        <div class="padding align-center vertical-center">
+
+
+
+          <div ng-if="userQueue ==1">
+            <div class="firstModal">
+              <div class="content">
+                <i class="ion-happy-outline"></i>
+                <br>
+                <br>Congrats, you are
+                <br>
+                <div class="first">FIRST!</div>
+                <div class="hint">
+                  Start the chat quickly or the seller will move to another buyer!
+                </div>
+              </div>
+              <br>
+              <button class="oneUpButton gray-button" ng-click="chat(itemID);queueModal.hide()">
+                Chat with seller
+              </button>
+              <br>
+              <button class="oneUpButton gray-outline-button" ng-click="clickedyclack()">
+                Continue discovering
+              </button>
+              <br>
+              <br> This<strong> chat </strong>can be found in your <strong>chatlist</strong>
+            </div>
+          </div>
+
+
+
+
+
+          <div ng-if="userQueue != 1">
+            <div class="notFirstModal">
+              <div class="content">
+                <i class="ion-sad-outline"></i>
+                <br> Sorry.
+                <br /> Someone was quicker than you.
+
+                <br> Your place in line is <span class="queueNumber">{{userQueue}}</span>.
+              </div>
+              <button class="oneUpButton gray-outline-button" ng-click="clickedyclack()">
+                Continue discovering
+              </button>
+              <div class="content note">
+                This <strong>product</strong> can be found in your <strong> wishlist.</strong>
+                <br>You'll be notified if you move <strong>first in line.</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ion-content>
+    </div>
+  </script>
+
+  <script id="exit.html" type="text/ng-template">
+    <div class="modal">
+
+      <ion-content scroll="false" class="ion-overlay white">
+        <div class="padding align-center vertical-center">
+
+          <div class="queue-info">
+            <p class="black uppercase">
+              <strong>Exit?</strong>
+            </p>
+          </div>
+          <button class="button button-positive" ng-click="cancelExit()">
+            Cancel
+          </button>
+          <button class="button button-dangerous" ng-click="exit()">
+            Exit
+          </button>
+        </div>
+      </ion-content>
+    </div>
+  </script>
+
+
+</ion-view>

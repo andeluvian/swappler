@@ -1,0 +1,69 @@
+<ion-view>
+  <ion-content id="ken" has-bouncing="false" on-swipe-right="goBack()" on-swipe-left="goForward()" style="width:100%; height:100%; position:absolute;">
+
+    <header class="bar bar-chatlistheader">
+      <h1 class="some">
+        
+        Chats
+
+      </h1>
+    </header>
+
+    <ion-tabs class="tabs-striped tabs-top indicatorColor">
+
+
+      <ion-tab title="Buying">
+
+        <div class="bgcolornull chatListContainer">
+
+          <div class="list chatList_list" ng-repeat="msg in buyerList | orderBy: '-unRead'">
+
+            <a class="item item-avatar" style=" height:auto; text-align:left !important;" href="#/chat/{{msg.$id}}">
+
+              <img class="roundImg" ng-src="{{userInfo(msg.owner).imageUrl}}">
+
+              <div class="marginleft10">
+                <h2>{{itemInfo(msg.$id).name}}</h2>
+                <p>{{userInfo(msg.owner).name}}</p>
+                <p ng-repeat="x in msg.content" ng-if="$last===true">{{x.content}}</p>
+              </div>
+              <span ng-if="msg.unRead !== 0" class="badge chatListBadge notificationBadge">{{msg.unRead}}</span>
+            </a>
+          </div>
+        </div>
+
+      </ion-tab>
+
+
+      <ion-tab title="Selling">
+
+        <div class="bgcolornull chatListContainer">
+
+          <div class="list chatList_list" ng-repeat="msg in sellerList | orderBy: '-unRead'">
+
+
+            <a class="item item-avatar" style=" height:auto; text-align:left !important;" href="#/chat/{{msg.$id}}">
+
+
+              <img class="roundImg" ng-src="{{userInfo(msg.buyer).imageUrl}}">
+
+              <div class="marginleft10">
+                <h2>{{itemInfo(msg.$id).name}}</h2>
+                <p>{{userInfo(msg.buyer).name}}</p>
+                <p ng-repeat="x in msg.content" ng-if="$last===true">{{x.content}} </p>
+              </div>
+
+              <span ng-if="msg.unRead !== 0" class="badge chatListBadge notificationBadge">{{msg.unRead}}</span>
+            </a>
+
+
+          </div>
+        </div>
+      </ion-tab>
+    </ion-tabs>
+
+  </ion-content>
+  <close-footer direction="'profile'"></close-footer>
+
+
+</ion-view>

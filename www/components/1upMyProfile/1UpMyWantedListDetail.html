@@ -1,0 +1,41 @@
+<ion-view title="Product Details">
+  <ion-content has-bouncing="false" class="oneUpProductDetail">
+    <div class="image-padding" style="background-color:white">
+    </div>
+
+    <img class="product-image" ng-src="data:image/jpeg;base64,{{detailItem.imageURL}}">
+
+    <div class="productContent-container">
+      <div class="pixelline">
+
+        <button class="oneUpButton slateGreen-button iWantBtn" ng-click="delete()"> REMOVE FROM WISHLIST</button>
+      </div>
+      <div>
+        <div class="align-center detailitemtitle">
+          {{detailItem.name}}
+        </div>
+        <div class="align-center detailitemprice ">
+          {{detailItem.cost}} €
+        </div>
+        <div class="title">Your queue number: {{queueNumber}}</div>
+        <div class="title">
+          Description
+        </div>
+        <div class="product-description">
+          {{detailItem.desc}}
+        </div>
+      </div>
+
+      <div class="title">Seller</div>
+      <a href="#/peopleDetails/{{ownerInfo.$id}}" class="item item-avatar seller-avatar-hardCoded">
+        <img class="seller-image" ng-src="{{ownerInfo.imageUrl}}">
+        <div class="seller-name">
+          {{ownerInfo.name}}
+        </div>
+        <div class="paddu"></div>
+      </a>
+    </div>
+  </ion-content>
+  <back-footer></back-footer>
+
+</ion-view>

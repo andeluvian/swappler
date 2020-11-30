@@ -1,0 +1,80 @@
+<style>
+  .tourbox {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #endTour {
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    width: 40%;
+  }
+  
+  .slider-pager {
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .slider-pager .slider-pager-page {
+    width: 5px;
+    top: initial;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  
+  .slider-pager .slider-pager-page .icon {
+    font-size: 1.5em;
+  }
+</style>
+<ion-view>
+
+
+  <ion-slide-box class="tourbox">
+
+
+    <ion-slide>
+      <ion-content has-bouncing="false" scroll="false" class="ion-background" style="background-image: url('./img/Tour_Image1.png');">
+      </ion-content>
+
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-content scroll="false" class="ion-background" style="background-image: url('./img/Tour_Image2.png');">
+      </ion-content>
+
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-content scroll="false" class="ion-background" style="background-image: url('./img/Tour_Image3.png');">
+      </ion-content>
+
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-content scroll="false" class="ion-background" style="background-image: url('./img/Tour_Image4.png');">
+      </ion-content>
+
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-content scroll="false" class="ion-background" style="background-image: url('./img/Tour_Image5.png');">
+
+        <button id="endTour" class="button button-dark" ng-click="endTour()">
+          End tour
+        </button>
+      </ion-content>
+
+    </ion-slide>
+
+  </ion-slide-box>
+</ion-view>

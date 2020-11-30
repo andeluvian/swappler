@@ -1,0 +1,141 @@
+#ken2 .scroll {
+  height: 100%;
+}
+
+#ken2 .scroll .tabs-top > .tabs,
+.tabs.tabs-top {
+  position: relative;
+  top: 0px;
+}
+
+.TransactionsRow {
+  width: 80%;
+  margin-left: 10%;
+  position: absolute;
+  top: 0px;
+  height: 50px;
+}
+
+.transaction-item-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.transaction-item-container img {
+  width: 100%;
+}
+
+.transaction-item-container .itemtitle h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 14pt;
+  color: black;
+}
+
+.transaction-item-container .itemtitle p {
+  font-size: 12pt;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.TransactionCol {
+  width: 48%;
+  margin: 1%;
+  float: left;
+}
+
+.TransactionCol p {
+  font-size: 10pt;
+  color: black;
+  text-align: center;
+}
+
+.transactionListContainer {
+  position: relative;
+  top: 80px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.transaction-seller-container {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.transaction-seller-container img {
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+}
+
+.transaction-seller-container h3 {
+  font-size: 14pt;
+  font-style: italic;
+  font-family: Alegreya, sans-serif;
+}
+
+.transaction-seller-container p {
+  font-size: 14pt;
+  font-family: Alegreya, sans-serif;
+  color: rgb(102, 102, 102);
+  margin-left: 65px;
+}
+
+.transaction-rating-container {
+  width: 100%;
+  padding-bottom: 10px;
+  height: 65px;
+  border-bottom: 2px solid rgb(227, 224, 207);
+  margin-bottom: 5px;
+}
+
+.transaction-rating-container h3 {
+  font-size: 14pt;
+  font-style: italic;
+  font-family: Alegreya, sans-serif;
+}
+
+.transaction-rating-container p {
+  text-align: left;
+  line-height: 18pt;
+  font-size: 14pt;
+  vertical-align: middle;
+}
+
+.ratingButton-dark {
+  margin: 5px 30px 5px 0px;
+  border-radius: 50%
+}
+
+.ratingButton {
+  margin: 5px 30px 5px 0px;
+  border-radius: 50%
+}
+
+.ratingButton-dark i {
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  position: absolute;
+  font-size: 24px;
+  color: black;
+}
+
+.ratingButton i {
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  position: absolute;
+  font-size: 24px;
+  color: rgb(159, 168, 163);
+}
+
+.ratingButton i icon {
+  width: 24px;
+  height: 24px;
+}

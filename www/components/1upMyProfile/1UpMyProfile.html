@@ -1,0 +1,135 @@
+<ion-view title="Profile page">
+
+  <ion-content has-bouncing="false" on-scroll="getScrollPosition()">
+
+
+
+    <div class="head-container">
+
+      <div class="bgcover">
+        <img ng-src="{{data.imageUrl}}" class="blur imagestuff">
+
+
+        <div class="prftxt align-center">
+          {{data.name}}
+        </div>
+        <div ng-show="isPremium" class="titletxt align-center">{{data.title}}</div>
+        <div class="rndImgContainer">
+
+          <img class="profile-image" ng-src="{{data.imageUrl}}">
+
+        </div>
+      </div>
+      <button class="oneUpButton slateGreen-button headBtn" ng-click="gotoedit()"> Edit Profile</button>
+    </div>
+    <div>
+      <div class="paddme"></div>
+      <div class="profile-stat-row">
+
+        <div class="connection">
+          <a ng-click="viewAll()">
+            <div class="some">
+              {{itemA.length}}
+            </div>
+            <div class="sometxt">
+              on sale
+            </div>
+          </a>
+        </div>
+
+        <div class="connection">
+          <a ng-click="goToFollow()">
+            <div class="some">
+              {{follower.length}}
+            </div>
+            <div class="sometxt">
+              followers
+            </div>
+          </a>
+        </div>
+
+        <div class="connection">
+          <a ng-click="goToFollow()">
+            <div class="some">
+              {{followings.length}}
+            </div>
+            <div class="sometxt">
+              following
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="padding padding-bottom">
+
+        <div class="title">
+          About me
+        </div>
+        <div></div>
+        <div class="abouttxt">
+          {{data.about}}</div>
+
+        <div class="title paddme">
+          Find me
+        </div>
+
+        <div class="row paddme">
+
+          <div class="socialmediaicons col-25">
+            <a ng-click="fb()" class="ion-social-facebook"></a>
+
+          </div>
+          <div class="socialmediaicons col-25">
+            <a ng-click="ig()" class="ion-social-instagram-outline"></a>
+
+          </div>
+
+          <div class="socialmediaicons col-25">
+            <a class="ion-social-twitter" ng-click="tw()"></a>
+
+
+          </div>
+          <div class="socialmediaicons col-25">
+            <a ng-click="blog()" class="ion-social-rss"></a>
+
+          </div>
+
+
+        </div>
+        <div class="title">
+          Products on sale
+        </div>
+
+
+
+        <div ng-repeat="item in itemA | limitTo : 9999">
+          <div class="item-container">
+            <a ng-href="#/product-details/{{item.$id}}">
+              <img src="data:image/jpeg;base64,{{item.imageURL}}">
+            </a>
+            <div class="itemtitle">{{item.name}}</div>
+            <div class="itemdescription">{{item.desc| truncateFilter:42}}</div>
+            <div class="itemprice">
+              {{item.cost}} €
+            </div>
+
+          </div>
+        </div>
+
+        <div class="paddme">
+
+          <button class="oneUpButton gray-button" ng-click="viewAll()" class="viewbtn button-positive"> View All
+          </button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </ion-content>
+
+  <close-footer direction="'profile'"></close-footer>
+</ion-view>

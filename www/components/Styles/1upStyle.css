@@ -1,0 +1,447 @@
+/*page area*/
+.oneUpAddNew .example {
+  color: blue;
+}
+/*end oneUpAddNew*/
+.seller-header-box {
+  background: #666666;
+  color: white;
+  font-size: 8pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  line-height: 16px;
+  height: 16px;
+  position: absolute;
+  margin: -7px auto 0 -40px;
+  left: 50%;
+  width: 80px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  z-index: 99;
+}
+.seller-container-hardCoded {
+  border-top: 2px solid #666666;
+  position: relative;
+  margin: 0;
+  padding: 0 25px;
+  width: 100%;
+  float: left;
+}
+.seller-avatar-hardCoded {
+  border: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 80px !important;
+}
+.seller-img {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+.insideCard-p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15pt;
+  line-height: 50px;
+  font-style: italic;
+  color: #B0B0B0;
+  vertical-align: center;
+}
+.itemName-p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 21pt;
+  color: white;
+  font-style: normal;
+  color: #B0B0B0;
+  vertical-align: center;
+}
+.nopeButton {
+  background-color: aqua;
+}
+.buttonArea {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+.buttonBlock {
+  display: inline-block;
+  width: 49%;
+}
+.buttonBlock button {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 43%;
+}
+.buttonBlock button:active {
+  background-color: #fff;
+  color: gray;
+}
+.cardOver {
+  top: 7%;
+  position: absolute;
+  height: 78%;
+  width: 85%;
+  text-align: center;
+  background-color: #fff;
+  left: 7.5%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+/*animation*/
+.cardOver {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.cardOver.ng-hide {
+  opacity: 0;
+}
+.cardOver .content {
+  margin-top: 50pt;
+}
+.cardOver .content .p {
+  font-family: 'Alegreya', serif;
+  color: #000;
+  padding-top: 18pt;
+  font-size: 16pt;
+  line-height: 22.2pt;
+}
+.cardOver .content i {
+  color: #666666;
+  font-size: 91pt;
+}
+/*modal*/
+/*first Modal*/
+.firstModal {
+  color: #333333;
+  font-family: 'Alegreya', serif;
+}
+.firstModal .content {
+  font-size: 15pt;
+}
+.firstModal .content i {
+  font-size: 90pt;
+  color: #666666;
+}
+.firstModal .first {
+  font-size: 52pt;
+  margin-top: 20pt;
+  font-weight: bolder;
+}
+.firstModal .hint {
+  margin-top: 30pt;
+  padding: 20pt;
+  /*  font-weight: bold;*/
+}
+/*not first Modal*/
+.notFirstModal .content {
+  font-size: 23px;
+  font-family: 'Alegreya', serif;
+  color: #000;
+  line-height: 1.4;
+  padding-bottom: 20pt;
+}
+.notFirstModal .content i {
+  color: #666666;
+  font-size: 91pt;
+}
+.notFirstModal .note {
+  font-size: 12pt;
+  margin-top: 40pt;
+  color: #000000;
+}
+.notFirstModal .content .queueNumber {
+  font-weight: bold;
+  font-size: 28pt;
+}
+.oneUpChatList .chatList {
+  color: aqua;
+}
+/*oneUpLogin style*/
+.logo {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  margin: 40px auto -40px -150px;
+}
+.slogan {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  line-height: 1em;
+  width: 90%;
+  margin: 0px auto 20px;
+  text-shadow: 0px 1px 5px black;
+  -webkit-text-shadow: 0px 1px 5px black;
+}
+.button.button-fb {
+  background-color: rgba(59, 89, 152, 0.8);
+  border-color: #3b5998;
+}
+.button.button-fb.activated {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.button.button-dark {
+  background-color: rgba(58, 57, 58, 0.8);
+}
+.productBG {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+.productContent-container {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+}
+.product-image {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  height: 80%;
+  width: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  /* display: block;
+ margin: 0 auto;*/
+}
+.removebtn {
+  background-color: #8d230f;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  height: 40px;
+  width: 220px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-style: none;
+  display: block;
+  margin: auto;
+  padding: 0 30px;
+  font-size: 14px;
+  word-wrap: normal;
+  position: absolute;
+  align-content: center;
+  left: 22%;
+  top: 68%;
+}
+.pixelline {
+  border-bottom: 2px;
+  border-color: #9fa8a3;
+  border-style: solid;
+}
+.buttonpade {
+  margin-top: 15%;
+}
+.detailitemtitle {
+  font-family: 'Alegreya', serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10%;
+  color: black;
+}
+.detailitemprice {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  color: black;
+}
+.detaildesc {
+  margin-left: 5%;
+  color: black;
+  font-size: 14px;
+  width: 90%;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  /* margin-right: 2%; */
+  /* display: block; */
+}
+.content-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.image-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  height: 400px;
+  -webkit-transform: scale(1.2);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.2);
+  /* Firefox */
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -o-transform: scale(1.2);
+  /* Opera */
+  transform: scale(1.2);
+  filter: blur(30px);
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  overflow: hidden;
+}
+.seller-avatar-hardCoded {
+  border: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 80px !important;
+}
+.seller-img {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+.insideCard-p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15pt;
+  line-height: 50px;
+  font-style: italic;
+  color: #B0B0B0;
+  vertical-align: center;
+}
+.customList {
+  height: 100%;
+  width: 100%;
+}
+.side-margin {
+  margin-left: 9%;
+  margin-right: 9%;
+}
+.oneUpProductDetail .title {
+  color: black;
+  margin-top: 20px;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+.oneUpProductDetail .product-description {
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-top: 20pt;
+  font-family: 'Open Sans', sans-serif;
+}
+.oneUpProductDetail .seller-image {
+  margin-left: 9%;
+  margin-right: 9%;
+}
+.oneUpProductDetail .seller-name {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 15pt;
+  line-height: 50px;
+  font-size: 12pt;
+}
+/*Common area*/
+.oneUpButton {
+  font-family: 'OpenSans-Light', sans-serif;
+  width: 75%;
+  color: white;
+  margin-left: 12.5%;
+  height: 50px;
+  border-radius: calc(25px);
+  -webkit-border-radius: calc(25px);
+  display: block;
+  border: 1px solid;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+.gray-button {
+  background-color: #9fa8a3;
+  border-color: #768b7f;
+}
+.gray-button:active,
+.gray-button:hover {
+  background-color: #768b7f;
+  border-color: #9fa8a3;
+}
+.gray-outline-button {
+  background-color: transparent;
+  color: #9fa8a3;
+  border-color: #9fa8a3;
+}
+.gray-outline-button:active,
+.gray-outline-button:hover {
+  background-color: #9fa8a3;
+  color: white;
+}
+.slateGreen-button {
+  background-color: #9fa8a3;
+  border-color: #768b7f;
+}
+.slateGreen-button:active,
+.slateGreen-button:hover {
+  background-color: #768b7f;
+}
+.headBtn {
+  position: absolute;
+  bottom: -21px;
+}
+.iWantBtn {
+  position: absolute;
+  top: calc(-25px);
+}
+.margin-bottom {
+  margin-bottom: 10px;
+}
+.blur {
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
+.imagestuff {
+  width: 100%;
+  height: auto;
+  transform: scale(2.5);
+}
+.noblur {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 2;
+}
+.head-container {
+  padding-bottom: 5px;
+  position: relative;
+}
+.head-container .bgcover {
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  left: 0;
+  position: relative;
+  z-index: -1;
+}
+.head-container .profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  left: 50%;
+  display: block;
+  position: relative;
+  margin: 15px auto 20px -75px;
+  border-radius: 750px;
+  -webkit-border-radius: 75px;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 2;
+}

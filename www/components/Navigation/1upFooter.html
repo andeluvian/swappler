@@ -1,0 +1,27 @@
+<div class="bar bar-footer">
+  <div class="button-bar">
+
+    <a class="button" nav-transition="none" ng-click="toNotifications()">
+      <span class="icon ion-android-mail"></span>
+      <span ng-if="unReadNotification!==0" class="badge footerBadge notificationBadge">{{unReadNotification}}</span>
+      <br /> Activity
+    </a>
+    <a class="button" ng-click="toSearch()">
+      <span class="icon ion-android-search"></span>
+      <br /> Search
+    </a>
+
+    <a class="button" ng-click="toFilter()">
+      <span class="icon ion-grid"></span>
+      <br /> Filter
+    </a>
+    <a class="button" ng-click="toAddNew()">
+      <span class="icon ion-camera"></span>
+      <br /> Add New
+    </a>
+    <a class="button" ng-click="toProfile()">
+      <span class="icon ion-navicon-round"></span>
+      <br /> Menu
+    </a>
+  </div>
+</div>

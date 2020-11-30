@@ -1,0 +1,38 @@
+<ion-view>
+  <ion-header-bar>
+    <div class="wishtitle"> People to Follow </div>
+  </ion-header-bar>
+
+
+  <ion-content has-bouncing="false">
+    <div class="paddme"></div>
+    <div ng-if="user.$id !== isMe" class="list listOverride" ng-repeat="user in premiumArray">
+
+      <div class="item item-avatar item-icon-right itemOverride">
+
+
+        <img ng-click="profile(user.$id)" class="roundIMG" ng-src="{{user.imageUrl}}">
+
+        <div class="userName" ng-click="profile(user.$id)">
+          <h2>{{user.name}}</h2>
+
+        </div>
+        <div class="buttons">
+          <a ng-show="!clicked(user.$id)" ng-click="follow(user.$id)">
+            <i class=" icon ion-person-add asd"></i>
+          </a>
+
+          <a ng-show="clicked(user.$id)" ng-click="unfollow(user.$id)">
+            <i class="icon ion-ios-close-empty asd2"></i>
+
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+  </ion-content>
+  <close-footer direction="'cards'"></close-footer>
+
+</ion-view>

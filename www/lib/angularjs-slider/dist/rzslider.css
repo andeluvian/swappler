@@ -1,0 +1,290 @@
+/**
+ * Angular JS slider directive
+ *
+ * (c) Rafal Zajac <rzajac@gmail.com>
+ * http://github.com/rzajac/angularjs-slider
+ *
+ * Licensed under the MIT license
+ */
+
+
+/* Slider colors */
+
+
+/* Slider size parameters */
+
+
+/*rzslider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  margin: 30px 0 15px 0;
+  vertical-align: middle;
+}
+rzslider span {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+}
+rzslider span.rz-base {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+rzslider span.rz-bar {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: #768B7F;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+rzslider span.rz-bar.rz-selection {
+  z-index: 1;
+  width: 0;
+  background: #E3E0CF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+rzslider span.rz-pointer {
+  top: -14px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: #E3E0CF;
+  border: 1px solid #BCB19C;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+rzslider span.rz-pointer:after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  content: '';
+}
+rzslider span.rz-pointer:hover:after {
+  background-color: #ffffff;
+}
+rzslider span.rz-pointer.rz-active:after {
+  background-color: #BCB19C;
+}
+rzslider span.rz-bubble {
+  top: -32px;
+  padding: 1px 3px;
+  color: #E3E0CF;
+  cursor: default;
+}
+rzslider span.rz-bubble.rz-selection {
+  top: 16px;
+}
+rzslider span.rz-bubble.rz-limit {
+  color: #E3E0CF;
+}*/
+
+
+/*grey slider*/
+
+rzslider.grey-slider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  margin: 30px 0 15px 0;
+  vertical-align: middle;
+}
+
+rzslider.grey-slider span {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+rzslider.grey-slider span.rz-base {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+rzslider.grey-slider span.rz-bar {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: #E3E0CF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+rzslider.grey-slider span.rz-bar.rz-selection {
+  z-index: 1;
+  width: 0;
+  background: #E3E0CF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+rzslider.grey-slider span.rz-pointer {
+  top: -14px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: #9fa8a3;
+  border: 1px solid #768B7F;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+rzslider.grey-slider span.rz-pointer:after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  content: '';
+}
+
+rzslider.grey-slider span.rz-pointer:hover:after {
+  background-color: #ffffff;
+}
+
+rzslider.grey-slider span.rz-pointer.rz-active:after {
+  background-color: #BCB19C;
+}
+
+rzslider.grey-slider span.rz-bubble {
+  top: -32px;
+  padding: 1px 3px;
+  color: #E3E0CF;
+  cursor: default;
+}
+
+rzslider.grey-slider span.rz-bubble.rz-selection {
+  top: 16px;
+}
+
+rzslider.grey-slider span.rz-bubble.rz-limit {
+  color: #E3E0CF;
+}
+
+
+/*end grey slider*/
+
+
+/*yellow slider*/
+
+rzslider.yellow-slider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  margin: 30px 0 15px 0;
+  vertical-align: middle;
+}
+
+rzslider.yellow-slider span {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+rzslider.yellow-slider span.rz-base {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+rzslider.yellow-slider span.rz-bar {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: #E3E0CF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+rzslider.yellow-slider span.rz-bar.rz-selection {
+  z-index: 1;
+  width: 0;
+  background: #768B7F;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+rzslider.yellow-slider span.rz-pointer {
+  top: -10px;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #E3E0CF;
+  border: 1px solid #BCB19C;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+rzslider.yellow-slider span.rz-pointer:after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  content: '';
+}
+
+rzslider.yellow-slider span.rz-pointer:hover:after {
+  background-color: #E3E0CF;
+}
+
+rzslider.yellow-slider span.rz-pointer.rz-active:after {
+  background-color: #E3E0CF;
+}
+
+rzslider.yellow-slider span.rz-bubble {
+  top: -32px;
+  padding: 1px 3px;
+  color: black;
+  cursor: default;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+rzslider.yellow-slider span.rz-bubble.rz-selection {
+  top: 16px;
+}
+
+rzslider.yellow-slider span.rz-bubble.rz-limit {
+  color: black;
+  cursor: default;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+
+/*end yellow slider*/

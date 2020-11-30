@@ -1,0 +1,82 @@
+<ion-view title="Product Description">
+
+
+  <!--
+        <ion-header-bar class="in-content-header padding">
+            <h1 class="title">{{cards[index].name}}</h1>
+        </ion-header-bar>
+
+        <div class="product-images-container">
+             <img ng-src="{{images[index]}}">
+            <img ng-src="data:image/jpeg;base64,{{cards[index].image}}">
+        </div>
+-->
+
+  <ion-content has-bouncing="false" class="oneUpProductDetail">
+
+    <!--    <div class="image-padding" style="background: url('data:image/jpeg;base64,{{itemdetail.imageURL}}') no-repeat center">-->
+    <div class="image-padding" style="background-color:white ">
+      <!--      <div class="blur productBG" style="background-image: url('data:image/jpeg;base64,{{itemdetail.imageURL}}')">-->
+      <!--<div class="profile-page-image" style="background-image: url('data:image/jpeg;base64,{{itemdetail.imageURL}}');" style="border-bottom: 2px solid #666666">-->
+
+      <!--  <img class="productBG" ng-src="data:image/jpeg;base64,{{itemdetail.imageURL}}">-->
+    </div>
+    <img class="product-image" ng-src="data:image/jpeg;base64,{{itemdetail.imageURL}}">
+    <!--</div>-->
+    <!--<div class="buttonpade"></div>-->
+    <div class="productContent-container">
+      <div class="pixelline">
+
+        <!---------iwant button---------------->
+        <button ng-if="loginID !== itemdetail.submitedby" class="oneUpButton slateGreen-button iWantBtn" ng-click="iwant()">
+          I want this
+        </button>
+
+
+      </div>
+
+      <!-----------unwant button------------
+      <button ng-show="ref === false || ref === undefined" ng-if="wantbutton===true" class="button-follow editbtn" ng-click="unwant();wantbutton=false">Remove</button>
+-->
+      <div>
+        <div class="align-center detailitemtitle">
+          {{itemdetail.name}}
+        </div>
+
+        <div class="align-center detailitemprice ">
+          {{itemdetail.cost}} €
+        </div>
+
+        <div class="title">
+          Description
+        </div>
+        <div class="product-description">
+          {{itemdetail.desc}}
+        </div>
+
+      </div>
+      <!--                    <div class="padding padding-bottom">-->
+      <div ng-if="loginID !== itemdetail.submitedby">
+
+
+
+        <div class="title">Seller</div>
+
+        <a href="#/peopleDetails/{{userinfo.$id}}" class="item item-avatar seller-avatar-hardCoded">
+          <img class="seller-image" ng-src="{{userinfo.imageUrl}}">
+          <div class="seller-name">
+            {{userinfo.name}}
+          </div>
+        </a>
+      </div>
+      <div class="paddu"></div>
+    </div>
+
+
+  </ion-content>
+
+
+
+
+  <back-footer></back-footer>
+</ion-view>

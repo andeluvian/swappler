@@ -1,0 +1,279 @@
+<style>
+  .editbtn {
+    background-color: rgb(118, 139, 127);
+    font-family: $font-basic;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-style: none;
+    display: block;
+    margin: auto;
+    padding: 0 30px;
+    font-size: 14pt;
+    font-family: sans-serif;
+  }
+  
+  .exitbtn {
+    background-color: rgb(159, 168, 163);
+    font-family: $font-basic;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    display: block;
+    margin: auto;
+    padding: 0 30px;
+    font-size: 14pt;
+    border-style: none;
+  }
+  
+  .prftxt {
+    position: absolute;
+    top: 70%;
+    bottom: 5%;
+    left: 36%;
+    font-style: italic;
+    font-weight: bold;
+    height: 50px;
+    width: auto;
+    font-size: 14pt;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .some {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .smalltxt {
+    font-size: 14px;
+    color: black;
+  }
+  
+  .bigtxt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+  }
+  
+  .desctxt {
+    font-size: 12px;
+    color: rgb(118, 139, 127);
+    font-weight: bold;
+  }
+  
+  .desc {
+    white-space: nowrap;
+    color: black;
+    font-size: 14px;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 15%;
+  }
+  
+  .someicon {
+    color: rgb(102, 102, 102);
+    height: 30px;
+    width: 30px;
+  }
+  
+  .fulli {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .bgcover {
+    background-size: cover;
+    background-color: $grey;
+    width: 100%;
+    height: 0;
+    padding-bottom: 125%;
+    margin-top: 0;
+    margin-bottom: -25px;
+    left: 0;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .blur {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  
+  .noblur {
+    -webkit-filter: blur(0px);
+    !important filter: blur(0px);
+    !important
+  }
+</style>
+
+
+<ion-view title="Profile page">
+  <ion-content>
+
+    <div class=" bgcover" style="background-image: url('{{profile.imageUrl}}');">
+      <div class="prftxt align-center noblur" style="">
+        {{profile.name}}
+      </div>
+    </div>
+    <div>
+      <!--            <div style="position:absolute;"
+         <img class="your-menu-profile-img align-center noblur" style="" ng-src="{{profile.imageUrl}}">  
+           </div> -->
+
+
+    </div>
+
+    <button class="button-follow editbtn" ng-click="gotoedit()"> Edit </button>
+    <!--        <h3 class="align-center">
+            {{profile.name}}
+        </h3>-->
+    <div class="row profile-stat-row">
+      <div class="col col-33 profile-stat-col">
+        <div class="some">
+          {{followers.length}}
+          <!--                    <span class="icon ion-heart"></span>-->
+        </div>
+        <div class="smalltxt">
+          followers
+        </div>
+      </div>
+      <div class="col col-33 profile-stat-col">
+        <div class="some">
+          {{followings.length}}
+          <!--                    <span class="icon ion-happy-outline"></span>-->
+        </div>
+        <div class="smalltxt">
+          following
+        </div>
+      </div>
+      <div class="col col-33 profile-stat-col">
+        <div class="some">
+          {{userItems.length}}
+          <!--                    <span class="icon ion-bag"></span>-->
+        </div>
+        <div class="smalltxt">
+          items on sale
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+
+    <div class="padding padding-bottom">
+      <!-- <img class="small-profile-image about-me-image" src="{{profile.imageUrl}}" /> -->
+      <div class="bigtxt" style="margin-left:5%;">
+        About me
+      </div>
+      <div></div>
+      <div ng-model="data.about" class="smalltxt" style="margin-left:10%;">
+        <!-- {{profile.about}} -->
+      </div>
+
+
+      <div class="bigtxt" style="margin-left:5%;">
+        How to find me
+      </div>
+      <div></div>
+      <div class="row" style="text-align:center;">
+        <!--    <div class="row links-row">-->
+        <div class="icon col-25">
+          <span class="ion-social-facebook someicon"></span>
+        </div>
+        <div class="icon col-25">
+          <span class="ion-home someicon"></span>
+        </div>
+        <!--    </div>-->
+        <!--  <div class="row links-row"> -->
+        <div class="icon col-25">
+          <span class="ion-social-pinterest someicon"></span>
+        </div>
+        <div class="icon col-25">
+          <span class="ion-social-instagram someicon"></span>
+        </div>
+        <!--  </div> -->
+
+      </div>
+      <div class="bigtxt" style="margin-left:5%;">
+        Items on sale - {{userItems.length}}
+
+      </div>
+      <ion-list style="border-style:none; border:0px;">
+        <ion-item ng-repeat="item in userItems" href="#/MyProfile/{{item.$id}}" style="width:100%; border-style:none; border:0px; margin-left:5%;padding:0;">
+          <img class="fulli" src="data:image/jpeg;base64,{{item.image}}">
+
+          <div style="width:100%;border-style:none; border:0px; text-align:center; margin:auto;">
+
+
+            <div class="bigtxt" style="width:100%;">{{item.name}}</div>
+            <div class="desc align-center" style="">{{item.desc}}</div>
+            <div></div>
+            <div class="desctxt" style="font-size:15px;">
+              {{item.cost}} €
+            </div>
+          </div>
+          <!--<ion-option-button class="button-info"
+                                               ng-click="delete(item,$index)">
+                                  Delete
+                                </ion-option-button>-->
+          <!-- <ion-delete-button class="ion-minus-circled"
+                                               ng-click="userItems.splice($index, 1)"> -->
+          <!-- <ion-delete-button class="ion-minus-circled"
+                                               ng-click="delete(item,$index)">
+                                </ion-delete-button> -->
+
+
+
+
+        </ion-item>
+        <div>
+          <br></br>
+        </div>
+      </ion-list>
+      <div>
+
+        <button class="exitbtn button-positive">
+          View All
+        </button>
+      </div>
+
+
+
+
+    </div>
+    <!--PADDING ENDS-->
+
+
+  </ion-content>
+
+  <back-footer></back-footer>
+  <!--
+
+    <div class="bar bar-footer">
+        <div class="button-bar">
+            <a class="button" ng-click="close()">
+                <span class="icon ion-ios-close-empty"></span><br />
+                Close
+            </a>
+        </div>
+    </div>
+-->
+
+</ion-view>

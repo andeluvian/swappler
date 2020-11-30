@@ -1,0 +1,62 @@
+<ion-view>
+
+  <ion-content has-bouncing="false" style="margin-bottom: 50px;" class="ion-overlay" on-scroll="getScrollPosition()">
+    <div class="paddme"></div>
+    <div class=" in-content-header align-center activitytitle paddme"> Activity </div>
+    <div class="horizontalRow"></div>
+    <div class="margintoptitle "></div>
+
+
+    <div style="color:black;position:absolute;top:0%" ng-bind="pageYOffset"></div>
+
+
+    <div ng-if="showUnRead">
+      <div class="title">Unread notifications</div>
+      <div class="list notificationwindowbg" ng-repeat="notification in unReadNotification | orderBy : '-time'">
+        <div class="item notificationwindowbg" ng-if="notification.category === 'Chats' || notification.category === 'Items'">
+          <h2 class="_text"> <strong>{{notification.content}}</strong></h2>
+          <span class="_timetext" am-time-ago="{{notification.time}}"></span>
+        </div>
+        <div class="item item-avatar notificationwindowbg" ng-if="notification.category === 'Users'">
+          <img class="roundImg" ng-src="{{userInfo(notification.sender).imageUrl}}">
+          <div class="marginLeft10">
+            <h2 class="_text"> <strong>{{notification.content}}</strong></h2>
+            <span class="_timetext" am-time-ago="{{notification.time}}"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="title">Older notifications</div>
+    <div class="list notificationwindowbg" ng-repeat="notification in readNotification | orderBy : '-time'">
+      <div class="item notificationwindowbg" ng-if="notification.category === 'Chats' || notification.category === 'Items'">
+
+        <h2 class="_text">{{notification.content}}</h2>
+
+        <span class="_timetext" am-time-ago="{{notification.time}}"></span>
+      </div>
+
+      <div class="item item-avatar notificationwindowbg" ng-if="notification.category === 'Users'">
+
+        <img class="roundImg" ng-src="{{userInfo(notification.sender).imageUrl}}">
+
+        <div class="marginLeft10">
+          <h2 class="_text">{{notification.content}}</h2>
+
+          <span class="_timetext" am-time-ago="{{notification.time}}"></span>
+        </div>
+
+      </div>
+
+    </div>
+    <div ng-if="showLoading" style="height: 100px">Loading...</div>
+
+
+
+  </ion-content>
+
+  <close-footer direction="'cards'" transition="'left'"></close-footer>
+
+</ion-view>

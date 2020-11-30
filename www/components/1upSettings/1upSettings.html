@@ -1,0 +1,69 @@
+<ion-view title="Settings">
+
+  <div class="bar settingsBar header80">
+    <h1 class="settingsTitle">Settings</h1>
+  </div>
+  <ion-content has-bouncing="false" class="padding margin_top80 settingsBackground">
+
+
+    <div class="padding">
+      <h3 class="sub_header">
+        <b> Notifications</b>
+            </h3>
+
+      <div class="list settings-list">
+
+
+        <ion-toggle class="toggleText" ng-repeat="category in categories" name="category" id="{{ category }}" value={{category.name}} ng-model="selection[category.name]">{{ category.name }}</ion-toggle>
+
+      </div>
+
+      <h3 class="sub_header">
+        <b> General </b>
+            </h3>
+
+      <div class="list">
+
+        <div class="item item-icon-right settingItemOverride">
+
+          <p> View Tour </p>
+          <a ng-click="toTour()">
+            <i class=" icon ion-ios-arrow-right asd"></i>
+          </a>
+        </div>
+        <div class="item item-icon-right settingItemOverride">
+
+          <p> Terms & Conditions </p>
+          <a>
+            <i class=" icon ion-ios-arrow-right asd"></i>
+          </a>
+        </div>
+
+        <div class="item item-icon-right settingItemOverride">
+
+          <p> About Swappler </p>
+          <a>
+            <i class=" icon ion-ios-arrow-right asd"></i>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="paddme"></div>
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="button-bar">
+      <a class="button" ng-click="applyChanges()">
+        <span class="icon ion-android-checkbox-outline"></span>
+        <br /> Apply changes
+      </a>
+
+      <close-button direction="main"></close-button>
+      <a class="button" ng-click="close()">
+        <span class="icon ion-ios-arrow-left"></span>
+        <br /> Back
+      </a>
+    </div>
+  </div>
+</ion-view>

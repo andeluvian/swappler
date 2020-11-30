@@ -1,0 +1,118 @@
+<style>
+
+
+  .removebtn {
+    background-color: rgb(141, 35, 15);
+    font-family: $font-basic;
+    text-transform: uppercase;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    display: block;
+    margin: auto;
+    padding: 0 30px;
+    font-size: 14pt;
+    word-wrap: normal;
+  }
+  
+  .content-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .image-padding2 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .seller-avatar-hardCoded {
+    border: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 80px !important;
+  }
+  
+  .seller-img {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+  
+  .insideCard-p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15pt;
+    line-height: 50px;
+    font-style: italic;
+    color: #B0B0B0;
+    vertical-align: center;
+  }
+  
+  .customList {
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+
+
+<ion-view title="Product Details">
+
+
+  <ion-content>
+
+    <div class="customList">
+      <div ng-repeat="item in userItems | filter: {$id: whichItem}">
+
+        <div class="image-padding2">
+          <div class="profile-page-image" style="background-image: url('data:image/jpeg;base64,{{item.image}}');" style="border-bottom: 2px solid #666666">
+          </div>
+
+
+        </div>
+        <div class="padding padding-bottom">
+
+          <div class="content-padding">
+            <h2 class="align-center">
+                {{item.name}}
+            </h2>
+
+            <h3 class="align-center">
+                {{item.cost}}€
+            </h3>
+
+            <h4>
+              Description
+            </h4>
+            <p>
+              {{item.desc}}
+            </p>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+
+
+
+
+
+  <div class="bar bar-footer">
+    <div class="button-bar">
+      <a class="button" ng-click="backtoProfile()">
+        <span class="icon ion-ios-close-empty"></span>
+        <br /> Close
+      </a>
+    </div>
+  </div>
+  </ion-footer-bar>

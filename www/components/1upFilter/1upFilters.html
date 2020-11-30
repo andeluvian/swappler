@@ -1,0 +1,93 @@
+<ion-view title="Filter Feed" class="filterBackground">
+
+
+  <ion-content has-bouncing="false" style="margin-bottom: 50px;" class="padding filterBackground">
+    <div class="filterTitle">Filter the feed</div>
+    <hr class="horizontalRow">
+    <div class="padding">
+
+      <div class="title">
+        Select product type
+      </div>
+      <div class="list categories-list side">
+        <ion-radio-fix ng-repeat="type in mainCategory" ng-model="mainCategorySelection.id" ng-value="type.id" class="no-border noborder categorytitle" name="type"> {{ type.name }}
+        </ion-radio-fix>
+
+
+      </div>
+
+
+      <div class="title">
+        Select Categories
+      </div>
+      <div class="list categories-list side">
+        <ion-radio-fix ng-repeat="category in categories" ng-model="selection.id" ng-value="category.id" class="no-border noborder categorytitle" name="category"> {{ category.name }}
+        </ion-radio-fix>
+
+      </div>
+      <div class="padding">
+        <div class="title">
+          Distance - kilometers, km
+        </div>
+
+
+        <div>
+          <rzslider class="yellow-slider" rz-slider-model="filterData.distance" rz-slider-floor="0" rz-slider-ceil="450" rz-slider-always-show-bar="true"></rzslider>
+        </div>
+
+      </div>
+      <div class="padding">
+        <div class="title">
+          Price range - euros, €
+        </div>
+
+        <div>
+
+        </div>
+
+
+        <rzslider class="yellow-slider" rz-slider-floor="0" rz-slider-ceil="251" rz-slider-model="filterData.minprice" rz-slider-high="filterData.maxprice" rz-slider-step="5" rz-slider-translate="sliderTranslate" rz-slider-hide-limit-labels="true">
+        </rzslider>
+
+      </div>
+
+      <div ng-if="selection.id!=='All'">
+
+        <div ng-show="checkCategorySearch(selection.id)" class="padding categorytitle">
+          <div class="title">
+            Clothes-size range
+          </div>
+          <rzslider class="yellow-slider" rz-slider-floor="0" rz-slider-ceil="letterMax" rz-slider-model="filterData.size" rz-slider-high="filterData.maxSize" rz-slider-translate="alphabetTranslate" rz-slider-step="1"></rzslider>
+        </div>
+
+
+        <div ng-hide="checkCategorySearch(selection.id)" class="padding ">
+          <div class="title">
+            size range
+          </div>
+
+          <rzslider class="yellow-slider paddme" rz-slider-floor="28" rz-slider-ceil="46" rz-slider-model="filterData.minshoe" rz-slider-high="filterData.maxshoe" rz-slider-step="2">
+          </rzslider>
+
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+
+  <div class="bar bar-footer">
+    <div class="button-bar">
+      <a class="button" ng-click="applyChanges()">
+        <span class="icon ion-android-checkbox-outline"></span>
+        <br /> Apply changes
+      </a>
+
+      <close-button direction="main"></close-button>
+      <a class="button" ng-click="close()">
+        <span class="icon ion-ios-arrow-left"></span>
+        <br /> Back
+      </a>
+    </div>
+  </div>
+</ion-view>

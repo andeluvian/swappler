@@ -1,0 +1,35 @@
+/*This stylesheet is for items styling that is shared among many sites, such as , wishlist, productdetail
+
+
+
+
+myitembox
+ .detailitemtitle {
+   font-family: 'Alegreya', serif;
+   font-size: 24px;
+   font-weight: bold;
+   font-style: italic;
+   margin-top: 10%;
+   color: black;
+ }
+
+ .detailitemprice {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 5%;
+   margin-top: 2%;
+   color: black;
+ }
+
+ .detaildesc {
+   margin-left: 10%;
+   color: black;
+   font-size: 12px;
+   width: 300px;
+   font-family: 'Open Sans', sans-serif;
+   margin-right: 2%;
+   display: block;
+ }
+
+*/

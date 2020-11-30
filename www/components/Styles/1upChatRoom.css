@@ -1,0 +1,305 @@
+.bar-footer {
+  padding: 0;
+  border-bottom: 0;
+  border-top: 1px solid #f2f2f2 !important;
+  height: 50px !important;
+  z-index: 10;
+  bottom: 0;
+}
+
+.bar-header {
+  padding: 0;
+  border-top: 0;
+  border-bottom: 1px solid #f2f2f2 !important;
+  height: 50px !important;
+  background: rgb(227, 224, 207);
+  z-index: 10;
+}
+
+.bar-subheader {
+  padding: 0;
+  border-top: 0;
+  border-bottom: 1px solid #f2f2f2 !important;
+  background: rgb(227, 224, 207);
+  z-index: 10;
+}
+
+.bar-subheader .button-bar a.button {
+  height: 30px!important;
+  margin-top: 10px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 0 !important;
+  background: rgba(227, 224, 207, 0.2);
+  padding: 0;
+  margin: 0;
+  top: 20%;
+  line-height: 8px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px !important;
+  color: #666666 !important;
+}
+
+.bar-subheader .button-bar a.button span.icon {
+  color: #666666 !important;
+}
+
+.bar-subheader .button-bar a.button span.icon:after {
+  color: white!important;
+}
+
+.bar-subheader .button-bar a.button span.icon:before {
+  font-size: 28px;
+  line-height: 20px;
+}
+
+.bar-subheader .button-bar a.button.activated {
+  background-color: whitesmoke;
+  color: #666666 !important;
+}
+
+.bar-subheader .button-bar a.button span.icon.activated {
+  color: white !important;
+  background-color: #666666 !important;
+}
+
+
+/* BUBBLES */
+
+.row {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+}
+
+.bubble_left {
+  width: 100%;
+  left: 0;
+  background-color: transparent;
+  margin-bottom: 1%;
+}
+
+.bubble_right {
+  width: 100%;
+  position: relative;
+  right: 0;
+  background-color: transparent;
+  margin-bottom: 1%;
+}
+
+.bubble_left img {
+  position: relative;
+  left: 0%;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.bubble_right img {
+  position: relative;
+  left: 30%;
+  /* margin-left: -50px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.bubble_left .textArea {
+  position: relative;
+  width: 66%;
+  float: left;
+  background-color: #e6e5eb;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bubble_left .imgArea {
+  position: relative;
+  width: 33%;
+  float: left;
+}
+
+.bubble_right .textArea {
+  position: relative;
+  width: 66%;
+  float: left;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bubble_right .imgArea {
+  position: relative;
+  width: 33%;
+  float: right;
+}
+
+
+/*  MISC  */
+
+._title {
+  color: #E3E0CF !important;
+}
+
+.enterMessageContainer {
+  background: rgb( 250, 250, 250);
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.showStatusDiv {
+  margin-top: 40%;
+  height: 20%;
+  margin-left: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.inputField {
+  float: left;
+  height: 39px;
+  width: 75%;
+  /*  background-color: #e6e5eb; */
+}
+
+.inputField input {
+  float: left;
+  height: 41px;
+  padding: 5px;
+  width: 100%;
+  line-height: 41px;
+  font-size: 12px;
+  vertical-align: middle;
+  background: inherit !important;
+  margin-left: 10px;
+  border: solid 0px;
+  border-color: #E3E0CF;
+}
+
+.sendButton {
+  /*background: rgba(255, 255, 255, 0.7);
+  */
+  float: right;
+  height: 41px;
+  width: 24%;
+  line-height: 41px;
+  font-size: 12px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.sendButton &activated {
+  color: black;
+}
+
+.sendIcon {
+  color: #E3E0CF;
+  font-size: 3.5em;
+  width: 40px;
+  padding: 5px !important;
+}
+
+
+/* //////////////////////// Modals ////////////////////////// */
+
+.upper_container {
+  border-bottom: 2px solid rgb(188, 177, 156);
+  margin-left: 10%;
+  margin-top: 0%;
+  width: 80%;
+  height: 50%;
+}
+
+.lower_container {
+  width: 80%;
+  height: 20%;
+  margin-left: 10%;
+  margin-top: 2%;
+  float: left;
+}
+
+.image_container {
+  width: 80%;
+  height: 30%;
+  margin-left: 10%;
+  margin-top: 2%;
+  float: left;
+}
+
+.roundItem {
+  margin-top: 40px;
+  margin-left: 5px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  float: left;
+}
+
+.smileyface {
+  color: rgb(102, 102, 102);
+  font-size: 92pt;
+}
+
+.soldText {
+  margin-top: 10%;
+  font-family: 'Alegreya', serif;
+  font-size: 21pt;
+  color: rgb(102, 102, 102);
+}
+
+.itemInfotext {
+  width: auto;
+  padding: 2px;
+  text-align: left;
+  font-family: 'Alegreya', serif;
+  font-size: 14pt;
+  color: rgb(102, 102, 102);
+}
+
+.buyerText {
+  float: left;
+  margin-top: 50px;
+  vertical-align: middle;
+  max-width: 90px;
+  width: auto;
+  padding: 2px;
+  text-align: left;
+  font-family: 'Alegreya', serif;
+  font-size: 14pt;
+  color: rgb(102, 102, 102);
+}
+
+.buyernameText {
+  margin-top: 50px;
+  margin-left -15px;
+  font-family: 'Alegreya', serif;
+  font-size: 14pt;
+  color: rgb(102, 102, 102);
+}
+
+.button_container {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-top: 2%;
+  float: left;
+}
+
+.greygreenbtn {
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgb(159, 168, 163);
+  border: 2px #768B7F;
+}
+
+.greygreenbtn. active {
+  background-color: #768B7F;
+}

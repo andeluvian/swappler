@@ -1,0 +1,47 @@
+.blur {
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
+.imagestuff {
+  width: 100%;
+  height: auto;
+  transform: scale(2.5);
+}
+.noblur {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 2;
+}
+.head-container {
+  padding-bottom: 5px;
+  position: relative;
+}
+.head-container .bgcover {
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  left: 0;
+  position: relative;
+  z-index: -1;
+}
+.head-container .profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  left: 50%;
+  display: block;
+  position: relative;
+  margin: 15px auto 20px -75px;
+  border-radius: 750px;
+  -webkit-border-radius: 75px;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 2;
+}

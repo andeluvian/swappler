@@ -1,0 +1,80 @@
+.button.activated {
+  border-color: rgba(118, 138, 127, 1);
+  background-color: rgba(118, 138, 127, 1);
+  color: white;
+}
+
+.gray-outline-button {
+  width: 75%;
+  background: transparent;
+  color: rgba(118, 138, 127, 1);
+  border-color: rgba(118, 138, 127, 1);
+}
+
+.gray-outline-button:active {
+  color: white;
+  background: rgba(118, 138, 127, 1);
+  border-color: rgba(118, 138, 127, 1);
+}
+
+.gray-outline-button:hover {
+  color: white;
+  background: rgba(118, 138, 127, 1);
+  border-color: rgba(118, 138, 127, 1);
+}
+
+
+/*gray*/
+
+.gray-button:active {
+  background: rgba(118, 138, 127, 1);
+  color: white;
+  border-color: rgba(118, 138, 127, 1);
+}
+
+.gray-button {
+  width: 75%;
+  color: white;
+  background: rgba(159, 168, 163, 1);
+  border-color: rgba(118, 139, 127, 1);
+}
+
+.gray-button:hover {
+  color: white;
+  background: rgba(118, 138, 127, 1);
+  border-color: rgba(118, 138, 127, 1);
+}
+
+
+/*slateGreen*/
+
+.slateGreen-button:active {
+  background: rgba(118, 138, 127, 1);
+  color: white;
+  border-color: rgba(118, 138, 127, 1);
+}
+
+.slateGreen-button {
+  width: 75%;
+  height: 40px;
+  color: white;
+  background: rgba(118, 139, 127, 1);
+  border-color: rgba(159, 168, 163, 1);
+  font-family: 'OpenSans-Light', sans-serif;
+}
+
+.slateGreen-button:hover {
+  color: white;
+  background: rgba(118, 138, 127, 1);
+  border-color: rgba(118, 138, 127, 1);
+}
+
+
+/*head btn property*/
+
+.headBtn {
+  position: absolute;
+  bottom: -29px;
+  left: 12.5%;
+  font-family: 'OpenSans-Light', sans-serif;
+}

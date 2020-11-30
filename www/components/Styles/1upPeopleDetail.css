@@ -1,0 +1,31 @@
+  .followbutton {
+    width: 210px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 23%;
+    background-color: rgb(118, 139, 127);
+    border-color: rgb (159, 168, 163);
+    border: 1px;
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    align-content: center;
+    top: 63%;
+  }
+  
+  .personname {
+    position: absolute;
+    font-family: 'Alegreya', serif;
+    top: 75%;
+    left: 0%;
+    font-style: italic;
+    height: 50px;
+    width: 100%;
+    font-size: 18pt;
+    margin: auto;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }

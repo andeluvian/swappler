@@ -1,0 +1,68 @@
+.wishtitle {
+  font-family: 'Alegreya', serif;
+  background-color: rgb(159, 168, 163);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  padding-top: 5%;
+}
+
+.producttitle {
+  font-family: 'Alegreya', serif;
+  margin-left: 19pt;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.wishitemtitle {
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wishitemdescription {
+  margin-left: 15%;
+  white-space: nowrap;
+  color: black;
+  max-width: 280px;
+  height: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wishitemprice {
+  color: rgb(118, 139, 127);
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+}
+
+.iteminfotext {
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: rgb(219, 219, 219);
+  text-align: center;
+}
+
+.mywishitemimg {
+  margin-left: 9%;
+  text-align: center;
+  width: 75%;
+  height: 50%;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.rmvbtn {
+  color: rgb(145, 58, 58);
+}

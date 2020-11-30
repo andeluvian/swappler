@@ -1,0 +1,115 @@
+.settingsBackground {
+  background-color: white;
+}
+
+.asd {
+  color: white;
+  background-color: rgb(159, 168, 163);
+  height: 27px !important;
+  width: 27px !important;
+  border: 1px solid rgb(118, 139, 127);
+  border-radius: 50%;
+  text-align: center;
+  top: 50%;
+  font-size: 15.5px !important;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.settingItemOverride {
+  border: 0px !important;
+}
+
+.settingItemOverride p {
+  float: left;
+  font-size: 10pt;
+  line-height: 15pt;
+  color: black;
+}
+
+.settingsBar {
+  background-color: rgb(159, 168, 163) !important;
+}
+
+.toggleText span {
+  float: left;
+  font-size: 10pt;
+  line-height: 15pt;
+  color: black;
+}
+
+.settingsTitle {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
+  font-size: 14pt;
+  font-family: Alegreya;
+  width: 100%;
+  float: left;
+  color: white;
+}
+
+.sub_header {
+  color: black !important;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 14pt;
+  font-family: Alegreya;
+}
+
+.settings-list {
+  border-bottom: 1px solid rgb(227, 224, 207) !important;
+}
+
+.horizontalRow {
+  border-width: 1.3px;
+  width: 80%;
+  border-style: solid;
+  color: #E3E0CF;
+  z-index: 5;
+}
+
+.toggleText .toggle .track {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color, border;
+  transition-property: background-color, border;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 51px;
+  height: 31px;
+  border: solid 2px #e6e6e6;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.toggleText .toggle input:checked + .track {
+  border-color: #d3d3d3;
+  background-color: rgb(118, 139, 127);
+}
+
+.toggleText .toggle .handle {
+  -webkit-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  -webkit-transition-property: background-color, transform;
+  transition-property: background-color, transform;
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  background-color: #fff !important;
+  top: 7px;
+  left: 7px;
+}
+
+.toggleText .toggle .toggle-small .handle {
+  top: 2px;
+  left: 4px;
+  width: 21px;
+  height: 21px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  background-color: white !important;
+}

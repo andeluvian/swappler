@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <!--<meta http-equiv="Content-Security-Policy" content="script-src &apos;self&apos; https://*.firebaseio.com https://maps.googleapis.com/ https://maps.gstatic.com/ https://mts0.googleapis.com/ https://mts1.googleapis.com/ &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;">-->
+  <meta name="format-detection" content="telephone=no">
+
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; &apos;unsafe-inline&apos; https://*.firebaseio.com; img-src &apos;self&apos; http://meztelen.hu https://*.googleusercontent.com; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; https://*.firebaseio.com http://localhost:* http://sandbox.sun.bikeonet.hu; connect-src &apos;self&apos; http://sandbox.sun.bikeonet.hu wss://*.firebaseio.com ws://localhost:* https://apps.ionic.io">    -->
+
+
+
+  <title></title>
+
+  <!--<link href="lib/ionic/scss/ionic.css" rel="stylesheet"> -->
+  <!--<link href="lib/ionic/css/ionic.app.css" rel="stylesheet">-->
+
+
+  <!--PATH WAS WRONG, NO ITS CORRECT-->
+  <!-- compiled css output -->
+  <link href="css/ionic.app.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lib/angularjs-slider/dist/rzslider.css">
+
+  <!----FONTS---->
+  <link href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya%3A700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya%3A400italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open%20Sans%3A700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya%3A700italic" rel="stylesheet" type="text/css">
+  <!--STYLES-->
+  <!--Start-->
+
+  <link href="components/Styles/1upRadio.css" rel="stylesheet">
+  <link href="components/Styles/Common/1upTabs.css" rel="stylesheet">
+  <link href="components/Styles/Common/1upDefaults.css" rel="stylesheet">
+  <link href="components/Styles/1upFooter.css" rel="stylesheet">
+  <!--<link href="components/Styles/1upLogin.css" rel="stylesheet">-->
+  <link href="components/Styles/1upPeopleToFollow.css" rel="stylesheet">
+  <link href="components/Styles/1upNotifications.css" rel="stylesheet">
+  <link href="components/Styles/1upUpdateProfile.css" rel="stylesheet">
+  <link href="components/Styles/1upSettings.css" rel="stylesheet">
+  <!--Header Footer-->
+  <link href="components/Styles/1upFooter.css" rel="stylesheet">
+  <!--Main-->
+  <!--<link href="components/Styles/1upCards.css" rel="stylesheet">-->
+
+  <!-- Transactions -->
+  <link href="components/Styles/1upTransactionHistory.css" rel="stylesheet">
+
+  <link href="components/Styles/1upFilters.css" rel="stylesheet">
+  <link href="components/Styles/1upMainMenu.css" rel="stylesheet">
+  <link href="components/Styles/1upAddNew.css" rel="stylesheet">
+  <!--Profile-->
+  <link href="components/Styles/1UpMyProfile.css" rel="stylesheet">
+  <link href="components/Styles/1upWantedList.css" rel="stylesheet">
+  <!--<link href="components/Styles/1upMyWantedListDetail.css" rel="stylesheet">-->
+  <link href="components/Styles/1upPeopleDetail.css" rel="stylesheet">
+  <link href="components/Styles/1upProductDetail.css" rel="stylesheet">
+  <!--Chat-->
+  <link href="components/Styles/1upChatRoom.css" rel="stylesheet">
+  <link href="components/Styles/1upChatList.css" rel="stylesheet">
+  <!--common -->
+  <!-------------------followers--------------------->
+  <link href="components/Styles/1upFollow.css" rel="stylesheet">
+  <!--button-->
+  <!--<link href="components/Styles/Common/1upButton.css" rel="stylesheet">-->
+  <!--End common-->
+
+  <!--oneUpStyle-->
+  <link href="components/Styles/1upStyle.css" rel="stylesheet">
+
+
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/ng-cordova-oauth/ng-cordova-oauth.min.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+  <script src="js/ionRadio.js"></script>
+  <!--ionic push notification-->
+  <script src="lib/ionic-service-core/ionic-core.js"></script>
+  <script src="lib/ionic-service-push/ionic-push.js"></script>
+
+
+  <script src="js/angular-ios9-uiwebview-patch.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+
+  <script src="cordova.js"></script>
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/nativeTransition.js"></script>
+  <script src="js/pushNotification.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <script src="js/myProfileController.js"></script>
+  <script src="lib/collide/collide.js"></script>
+  <script src="lib/ionic-contrib-tinder-cards/ionic.tdcards.js"></script>
+  <!-- <script src="js/IonicConifg.js"></script>-->
+
+
+
+  <!-- Firebase -->
+  <script src="lib/firebase/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="lib/angularfire/dist/angularfire.min.js"></script>
+  <script src="lib/moment/min/moment.min.js"></script>
+  <script src="lib/angular-moment/angular-moment.min.js"></script>
+  <script src="lib/firebase/firebase-util.min.js"></script>
+  <script src="lib/rsvp/rsvp.min.js"></script>
+  <script src="lib/geofire/dist/geofire.min.js"></script>
+  <script src="lib/angularGeoFire/dist/angularGeoFire.min.js"></script>
+  <!--<script src="lib/angularfire/dist/ionic.ion.imagecachefactory.js"></script>-->
+  <script src="lib/angularjs-slider/dist/rzslider.min.js"></script>
+  <script src="lib/ng-lodash/build/ng-lodash.min.js"></script>
+
+  <!--MainFooter -->
+  <script src="components/Navigation/1upNavigation.directive.js"></script>
+  <script src="components/Navigation/1upNavigation.services.js"></script>
+  <script src="components/Navigation/1upNavigation.controller.js"></script>
+  <!-------------------stylesheet--------------------->
+
+  <!--End MainFooter-->
+
+  <!--Authentication & Login page -->
+  <script src="components/Authentication/1upAuthentication.controller.js"></script>
+  <script src="components/Authentication/1upAuthentication.js"></script>
+  <script src="components/Authentication/1upAuthentication.services.js"></script>
+
+  <!--userdata -->
+  <script src="components/Userdata/1upUser.services.js"></script>
+  <!--End userdata-->
+
+  <!--main factory -->
+  <script src="components/Common/1upCommon.factory.js"></script>
+  <!--End main factory-->
+  <!--1upCards -->
+  <script src="components/1upCards/1upCards.js"></script>
+  <script src="components/1upCards/1upCards.controller.js"></script>
+  <script src="components/1upCards/1upCards.services.js"></script>
+
+  <!--End 1upCards -->
+  <!--1up Items -->
+  <script src="components/Common/1upItems/1upItems.js"></script>
+  <script src="components/Common/1upItems/1upItems.services.js"></script>
+  <!--End 1up Items-->
+  <!--1up geoFire -->
+  <script src="components/1upGeoFire/1upGeoFire.services.js"></script>
+  <!--End 1up geoFire-->
+
+  <!--Update Profile page -->
+  <script src="components/1upProfile/1upUpdateProfile.controller.js"></script>
+  <!--followers page -->
+  <script src="components/1upMyProfile/1upFollow/1upFollow.controllers.js"></script>
+  <!--End followers page-->
+
+  <!--End Update Profile page-->
+  <!--Filter page -->
+  <script src="components/1upFilter/1upFilter.controller.js"></script>
+  <script src="components/1upFilter/1upFilter.services.js"></script>
+  <!--------------------stylesheet-------------------->
+
+  <!--End Filter page-->
+  <!--My Profile Controller -->
+  <script src="components/1upMyProfile/1UpMyProfile.controller.js"></script>
+  <script src="components/1upMyProfile/1UpMyProfile.factory.js"></script>
+
+
+  <!--End My Profile Controller-->
+  <!--People detail controller -->
+  <script src="components/1upMyProfile/1UpPeopleDetail/1UpPeopleDetail.controller.js"></script>
+  <!--End People controller-->
+  <!--Product detail controller -->
+  <script src="components/1upMyProfile/1UpProductDetail/1UpProductDetail.controller.js"></script>
+  <!--End Product detail controller-->
+
+  <!--My wanted controller -->
+  <script src="components/1upMyProfile/1upMyWantedList/1upWanted.controller.js"></script>
+  <script src="components/1upMyProfile/1upMyWantedList/1upWanted.services.js"></script>
+  <script src="components/1upMyProfile/1upMyWantedList/1upWantedDetail.controller.js"></script>
+  <!--End My wanted controller-->
+  <!-- Add New Item page -->
+  <script src="components/1upAddNewItem/1upAddNew.controller.js"></script>
+  <script src="components/1upAddNewItem/1upAddNew.service.js"></script>
+
+
+  <!--1upTimeStamp -->
+  <script src="components/Common/1upTimeStamp/1upTimeStamp.services.js"></script>
+  <!--End 1upTimeStamp-->
+  <!--oneUp chat -->
+  <script src="components/1upChat/1upChatRoom/1upChatRoom.services.js"></script>
+  <script src="components/1upChat/1upChatRoom/1upChatRoom.controller.js"></script>
+  <script src="components/1upChat/1upChatList/1upChatList.controllers.js"></script>
+  <script src="components/1upChat/1upChatList/1upChatList.services.js"></script>
+
+  <!--End oneUp chat-->
+
+  <!--oneUp MainMenu -->
+  <script src="components/1upMenu/1upMainMenu.controllers.js"></script>
+
+
+  <!--oneUp Notifications -->
+  <script src="components/1upNotifications/1upNotifications.controllers.js"></script>
+  <!--End oneUp Notifications-->
+
+  <!--oneUp PeopleToFollow -->
+  <script src="components/1upSearch/1upPeopleToFollow.controllers.js"></script>
+  <!--End oneUp PeopleToFollow-->
+
+  <!--oneUp expire -->
+  <script src="components/Common/1upExpireItem.services.js"></script>
+  <!--End oneUp expire-->
+
+</head>
+
+<!--oneup notification services -->
+<script src="components/Notifications/1upNotifications.services.js"></script>
+<!--End oneup notification services-->
+
+<!--oneup settings page -->
+<script src="components/1upSettings/1upSettings.controllers.js"></script>
+<!--End oneup settings page-->
+<!--transaction history -->
+
+<script src="components/1upMyProfile/1upTransactionHistory/1upTransactionHistory.controllers.js"></script>
+
+<script src="components/1upMyProfile/1upTransactionHistory/1upTransaction.services.js"></script>
+<!--End transaction history-->
+<!-- OneUp Tour -->
+<script src="components/1upTour/1upTour.controllers.js"></script>
+
+<body ng-app="starter" class="swappler">
+
+  <!-- <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar> -->
+
+  <ion-nav-view></ion-nav-view>
+
+
+</body>
+
+</html>

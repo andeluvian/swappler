@@ -1,0 +1,36 @@
+<ion-view title="My Wanted List">
+  <ion-content has-bouncing="false" style="bottom:50px;">
+    <div class="wishtitle ">Wishlist</div>
+    <div>
+    </div>
+    <div class="producttitle paddme">
+      Producs you want
+    </div>
+    <div class="paddme"></div>
+    <div class="noborder">
+      <div ng-repeat="item in wishList">
+        <div class="item-container">
+          <!--  href="#/mywantedlist/{{item.$id}} -->
+          <a ng-click="itemdetails(item.$id)">
+            <img src="data:image/jpeg;base64 ,{{itemInfo(item.$id).imageURL}} ">
+          </a>
+          <div class="itemtitle">{{itemInfo(item.$id).name}}</div>
+          <div class="itemdescription ">{{itemInfo(item.$id).desc}}</div>
+          <div></div>
+          <div class="itemprice">
+            Price: {{itemInfo(item.$id).cost}} €
+          </div>
+          <div class="iteminfotext row">
+            <div class="col-50">
+              Place in queue: {{item.myQueue}}
+            </div>
+            <div class="col-50 rmvbtn" ng-click="delete(item.$id, itemInfo(item.$id).name)">Remove product
+            </div>
+          </div>
+          <div class="paddme"></div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+<close-footer direction="'profile'"></close-footer>

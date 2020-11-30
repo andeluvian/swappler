@@ -1,0 +1,58 @@
+<ion-view title="Your Menu">
+  <ion-content has-bouncing="false" scroll="false" class="ion-overlay greyBackgound">
+    <div class="vertical-center">
+      <h3 class=" align-center wishtitle whiteText">
+                Main menu
+            </h3>
+      <hr class="horizontalRow">
+      <p class="align-center whiteText" style="font-size:16px;   -webkit-text-stroke-width: .7px;
+   -webkit-text-stroke-color: #fff;">
+        It's a good day for shopping,
+        <br />
+        <span class="your-menu-name" style="font-size:16px">{{data.name}}</span>
+      </p>
+
+      <img class="your-menu-profile-img" style="-webkit-box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.73);
+-moz-box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.73);
+box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.73);" ng-src="{{data.imageUrl}}">
+
+      <div class="row your-menu-row">
+        <div class="col-50" ng-click="myProfile()">
+          <a>
+            <span class="iconx ion-ios-person-outline"></span>
+            <br />
+            <div class="whiteText">profile</div>
+          </a>
+        </div>
+        <div class="col-50" ng-click="myWantedList()">
+          <a>
+            <span class="iconx ion-ios-cart-outline whiteText"></span>
+            <br />
+            <div class="whiteText">wanted</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row your-menu-row">
+
+        <div class="col-50" ng-click="MyChats()">
+          <a>
+            <span class="iconx ion-ios-chatbubble-outline whiteText"></span>
+            <br />
+            <div class="whiteText">chats</div>
+          </a>
+        </div>
+
+        <div class="col-50" ng-click="MySettings()">
+          <a>
+            <span class="iconx ion-ios-gear-outline whiteText"></span>
+            <br />
+            <div class="whiteText">settings</div>
+          </a>
+        </div>
+      </div>
+      <div class="paddme"></div>
+    </div>
+  </ion-content>
+  <close-footer direction="'cards'"></close-footer>
+</ion-view>

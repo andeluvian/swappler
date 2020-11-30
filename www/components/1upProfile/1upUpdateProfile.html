@@ -1,0 +1,109 @@
+<ion-view title="Create Profile">
+  <ion-content has-bouncing="false" class="ion-overlay">
+    <div class="head-container">
+
+      <div class="bgcover">
+        <img ng-src="{{data.imageUrl}}" class="blur imagestuff">
+        <div class="prftxt align-center">
+          Welcome,
+          <br>
+          <br>{{data.name}}
+        </div>
+        <div class="rndImgContainer">
+
+          <img class="profile-image" ng-src="{{data.imageUrl}}">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="paddme align-center">
+      Edit your profile.
+
+    </div>
+    <div class="paddme"></div>
+    <div class="padding">
+
+      <div ng-show="isPremium" class="title paddme">
+        Select your title
+
+        <div>
+          <select style="margin-top:10px; margin-bottom:10px; width:50%; margin-left:25%;" ng-model="data.title">
+            <option>Designer</option>
+            <option>Blogger</option>
+            <option>Photographer</option>
+            <option>Stylist</option>
+            <option>Enterpreneur</option>
+            <option>Sales</option>
+            <option>Retail</option>
+            <option>Media</option>
+            <option>Fashion</option>
+            <option>Interior</option>
+            <option>Wellness</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="title">
+          About you
+        </div>
+        <div class="aboutupdate">
+          <div class="paddme"></div>
+          <label class=" about-you item item-input item-stacked-label">
+            <textarea ng-model="data.about" type="text" placeholder="Write as much as you want."></textarea>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="padding">
+      <div class="title paddme">
+        Find me
+      </div>
+
+      <div class="paddme">
+
+
+
+
+        <div class="paddme socialmediaicons row">
+          <span class="col-25 ion-social-instagram"></span>
+          <textarea class="socialmediainput" type="text" ng-model="data.instagram" placeholder="Instagram Username"></textarea>
+        </div>
+        <div class="paddme socialmediaicons row">
+          <span class="col-25 ion-social-twitter"></span>
+          <textarea class="socialmediainput" ng-model="data.twitter" type="text" placeholder="Twitter Username"></textarea>
+
+        </div>
+
+        <div class="paddme socialmediaicons row">
+          <span class="col-25 ion-social-rss"></span>
+          <textarea class="socialmediainput" ng-model="data.blog" type="text" placeholder="www.blog.com"></textarea>
+        </div>
+        <div class="paddme socialmediaicons row">
+          <span class="col-25 ion-social-facebook"></span>
+          <div class="title">{{data.name}}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="oneUpButton gray-button margin-bottom" ng-click="update(destination)">
+      Save & Continue
+    </button>
+
+    <button class="oneUpButton gray-outline-button margin-bottom" ng-click="cancel(destination)">
+      Cancel </button>
+
+    <div class="paddme"></div>
+    <div>
+      <div class="notedisclaimer" style="margin-bottom:40px"><b>Note:</b> You can always come and edit your profile</div>
+    </div>
+    <div class="paddu"></div>
+
+
+  </ion-content>
+
+
+</ion-view>
